@@ -1,41 +1,38 @@
-vsim LIB.dff_nbits_tb
-# vsim LIB.dff_nbits_tb 
-# Start time: 20:40:55 on Apr 21,2024
+vsim LIB.add_sub_nbits_tb
+# vsim LIB.add_sub_nbits_tb 
+# Start time: 22:06:07 on Apr 21,2024
 # Loading sv_std.std
-# Loading LIB.dff_nbits_tb
-# Loading LIB.dff_nbits
-add wave -position insertpoint sim:/dff_nbits_tb/*
+# Loading LIB.add_sub_nbits_tb
+# Loading LIB.add_sub_nbits
+# Loading LIB.full_adder
+# Loading LIB.half_adder
+# Loading LIB.or_gate
 run -all
-restart
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-# End time: 20:42:58 on Apr 21,2024, Elapsed time: 0:02:03
+# Time =                    0: a = 00100100, b = 10000001, sub = 1, sum = 10100011, carry_out = 1
+# Teste passou: a = 00100100, b = 10000001, resultado = 10100011, Carry = 1
+# Time =                10000: a = 01100011, b = 00001101, sub = 1, sum = 01010110, carry_out = 0
+# Teste passou: a = 01100011, b = 00001101, resultado = 01010110, Carry = 0
+# Time =                20000: a = 01100101, b = 00010010, sub = 1, sum = 01010011, carry_out = 0
+# Teste passou: a = 01100101, b = 00010010, resultado = 01010011, Carry = 0
+# Time =                30000: a = 00001101, b = 01110110, sub = 1, sum = 10010111, carry_out = 1
+# Teste passou: a = 00001101, b = 01110110, resultado = 10010111, Carry = 1
+# Time =                40000: a = 11101101, b = 10001100, sub = 1, sum = 01100001, carry_out = 0
+# Teste passou: a = 11101101, b = 10001100, resultado = 01100001, Carry = 0
+# Time =                50000: a = 11000110, b = 11000101, sub = 0, sum = 10001011, carry_out = 1
+# Teste passou: a = 11000110, b = 11000101, resultado = 10001011, Carry = 1
+# Time =                60000: a = 11100101, b = 01110111, sub = 0, sum = 01011100, carry_out = 1
+# Teste passou: a = 11100101, b = 01110111, resultado = 01011100, Carry = 1
+# Time =                70000: a = 10001111, b = 11110010, sub = 0, sum = 10000001, carry_out = 1
+# Teste passou: a = 10001111, b = 11110010, resultado = 10000001, Carry = 1
+# Time =                80000: a = 11101000, b = 11000101, sub = 0, sum = 10101101, carry_out = 1
+# Teste passou: a = 11101000, b = 11000101, resultado = 10101101, Carry = 1
+# Time =                90000: a = 10111101, b = 00101101, sub = 1, sum = 10010000, carry_out = 0
+# Teste passou: a = 10111101, b = 00101101, resultado = 10010000, Carry = 0
+# ** Note: $finish    : ./SRC/BENCH/add_sub_nbits_tb.v(53)
+#    Time: 100 ns  Iteration: 0  Instance: /add_sub_nbits_tb
+# 1
+# Break in Module add_sub_nbits_tb at ./SRC/BENCH/add_sub_nbits_tb.v line 53
+# couldn't load file "/home/mario/intelFPGA/20.1/modelsim_ase/linux/ScintillaTk/libScintillaTk1.14.so": libstdc++.so.6: cannot open shared object file: No such file or directory
+# list element in quotes followed by ":" instead of space
+# End time: 22:07:54 on Apr 21,2024, Elapsed time: 0:01:47
 # Errors: 0, Warnings: 0

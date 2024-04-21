@@ -9,8 +9,13 @@ module full_adder_nbits #(
     genvar i;
 
     generate
-        for (i = 0; i <= width-1 ; i++) begin
-            full_adder fa_i(.a_i(a_i[i]), .b_i(b_i[i]), .cin_i(temp_s[i]), .s_o(s_o[i]), .cout_o(temp_s[i+1]));
+        for (i = 0; i <= width-1; i++) begin
+            full_adder fa_i (
+                .a_i(a_i[i]),
+                .b_i(b_i[i]),
+                .cin_i(temp_s[i]),
+                .s_o(s_o[i]),
+                .cout_o(temp_s[i+1]));
         end
     endgenerate
 
