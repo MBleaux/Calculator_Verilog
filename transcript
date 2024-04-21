@@ -1,12 +1,49 @@
-# ** Warning: (vsim-8463) Multiple default top-level library specified using the -lib option. The later specification will override the previous one.
-# vsim -lib LIB_BENCH -c -do "run -all" or_gate_tb 
-# Start time: 15:59:06 on Apr 21,2024
+vsim LIB.full_adder_nbits_tb
+# vsim LIB.full_adder_nbits_tb 
+# Start time: 20:18:05 on Apr 21,2024
 # Loading sv_std.std
-# Loading LIB_BENCH.or_gate_tb
-# ** Error: (vsim-3033) Instantiation of 'or_gate' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /or_gate_tb File: ./SRC/BENCH/or_gate_tb.v Line: 6
-#         Searched libraries:
-#             /home/mario/Verilog/Calculator/LIB/LIB_BENCH
-# Error loading design
-# End time: 15:59:07 on Apr 21,2024, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 1
+# Loading LIB.full_adder_nbits_tb
+# Loading LIB.full_adder_nbits
+# Loading LIB.full_adder
+# Loading LIB.half_adder
+# Loading LIB.or_gate
+add wave -position insertpoint sim:/full_adder_nbits_tb/*
+run -all
+# Time =                    0: a = 00100100, b = 10000001, sum = 10100101, carry_out = 0
+# Teste passou: a = 00100100, b = 10000001, resultado = 10100101
+# Carry = 0
+# Time =                10000: a = 00001001, b = 01100011, sum = 01101100, carry_out = 0
+# Teste passou: a = 00001001, b = 01100011, resultado = 01101100
+# Carry = 0
+# Time =                20000: a = 00001101, b = 10001101, sum = 10011010, carry_out = 0
+# Teste passou: a = 00001101, b = 10001101, resultado = 10011010
+# Carry = 0
+# Time =                30000: a = 01100101, b = 00010010, sum = 01110111, carry_out = 0
+# Teste passou: a = 01100101, b = 00010010, resultado = 01110111
+# Carry = 0
+# Time =                40000: a = 00000001, b = 00001101, sum = 00001110, carry_out = 0
+# Teste passou: a = 00000001, b = 00001101, resultado = 00001110
+# Carry = 0
+# Time =                50000: a = 01110110, b = 00111101, sum = 10110011, carry_out = 0
+# Teste passou: a = 01110110, b = 00111101, resultado = 10110011
+# Carry = 0
+# Time =                60000: a = 11101101, b = 10001100, sum = 01111001, carry_out = 1
+# Teste passou: a = 11101101, b = 10001100, resultado = 01111001
+# Carry = 1
+# Time =                70000: a = 11111001, b = 11000110, sum = 10111111, carry_out = 1
+# Teste passou: a = 11111001, b = 11000110, resultado = 10111111
+# Carry = 1
+# Time =                80000: a = 11000101, b = 10101010, sum = 01101111, carry_out = 1
+# Teste passou: a = 11000101, b = 10101010, resultado = 01101111
+# Carry = 1
+# Time =                90000: a = 11100101, b = 01110111, sum = 01011100, carry_out = 1
+# Teste passou: a = 11100101, b = 01110111, resultado = 01011100
+# Carry = 1
+# ** Note: $finish    : ./SRC/BENCH/full_adder_nbits_tb.v(42)
+#    Time: 100 ns  Iteration: 0  Instance: /full_adder_nbits_tb
+# 1
+# Break in Module full_adder_nbits_tb at ./SRC/BENCH/full_adder_nbits_tb.v line 42
+# couldn't load file "/home/mario/intelFPGA/20.1/modelsim_ase/linux/ScintillaTk/libScintillaTk1.14.so": libstdc++.so.6: cannot open shared object file: No such file or directory
+# list element in quotes followed by ":" instead of space
+# End time: 20:18:27 on Apr 21,2024, Elapsed time: 0:00:22
+# Errors: 0, Warnings: 0
