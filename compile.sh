@@ -29,6 +29,8 @@ echo -e "\e[33m---------------------------------------\e[0m"
     echo -e "\e[33m---------------------------------------\e[0m"
     vlog -sv -work LIB $PROJECTNAME/SRC/RTL/full_adder_nbits.v
     echo -e "\e[33m---------------------------------------\e[0m"
+    vlog -sv -work LIB $PROJECTNAME/SRC/RTL/dff_nbits.v
+    echo -e "\e[33m---------------------------------------\e[0m"
 
 echo -e "\e[33mEnd of compilation of the RTL files!\e[0m"
 echo -e "\e[33m---------------------------------------\e[0m"
@@ -45,6 +47,8 @@ echo -e "\e[35m---------------------------------------\e[0m"
     vlog -sv -work LIB $PROJECTNAME/SRC/BENCH/full_adder_tb.v
     echo -e "\e[35m---------------------------------------\e[0m"
     vlog -sv -work LIB $PROJECTNAME/SRC/BENCH/full_adder_nbits_tb.v
+    echo -e "\e[35m---------------------------------------\e[0m"
+    vlog -sv -work LIB $PROJECTNAME/SRC/BENCH/dff_nbits_tb.v
     echo -e "\e[35m---------------------------------------\e[0m"
 
 echo -e "\e[35mEnd of compilation the testbench files!\e[0m"

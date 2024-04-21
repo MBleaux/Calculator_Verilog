@@ -1,5 +1,5 @@
 module full_adder_nbits #(
-    parameter width = 4
+    parameter width = 8
 ) (
     input logic[width-1:0]  a_i, b_i,
     output logic[width-1:0] s_o,

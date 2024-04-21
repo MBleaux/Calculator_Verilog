@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module full_adder_nbits_tb;
+module full_adder_nbits_tb();
 
 parameter WIDTH = 8;
 reg [WIDTH-1:0] a, b;
@@ -8,7 +8,7 @@ wire [WIDTH-1:0] sum;
 wire carry_out;
 
 // Instanciar o módulo full_adder_nbits com a largura definida
-full_adder_nbits #(.width(WIDTH)) uut (
+full_adder_nbits #(.width(WIDTH)) dut (
     .a_i(a), 
     .b_i(b), 
     .s_o(sum), 

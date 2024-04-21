@@ -9,14 +9,64 @@ z2
 !i10f 100
 cModel Technology
 Z0 d/home/mario/Verilog/Calculator_Verilog
-vfull_adder
+vdff_nbits
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1713723552
+Z2 !s110 1713724849
+!i10b 1
+!s100 DOX`6iY9TSb9JO[aB8z[12
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+II[o]S0Il]mKWHVn]N`9D^2
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1713724840
+8./SRC/RTL/dff_nbits.v
+F./SRC/RTL/dff_nbits.v
+!i122 4
+L0 1 15
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1713724848.000000
+!s107 ./SRC/RTL/dff_nbits.v|
+!s90 -sv|-work|LIB|./SRC/RTL/dff_nbits.v|
+!i113 1
+Z7 o-sv -work LIB
+Z8 tCvgOpt 0
+vdff_nbits_tb
+R1
+R2
+!i10b 1
+!s100 7jnQ849mj;4l]`W_igWjV0
+R3
+IXGBh0QoHI8IJ^kXN:W[VG3
+R4
+S1
+R0
+w1713724597
+8./SRC/BENCH/dff_nbits_tb.v
+F./SRC/BENCH/dff_nbits_tb.v
+!i122 9
+L0 4 35
+R5
+r1
+!s85 0
+31
+Z9 !s108 1713724849.000000
+!s107 ./SRC/BENCH/dff_nbits_tb.v|
+!s90 -sv|-work|LIB|./SRC/BENCH/dff_nbits_tb.v|
+!i113 1
+R7
+R8
+vfull_adder
+R1
+Z10 !s110 1713724848
 !i10b 1
 !s100 5Z[gGNF?U?Fc1@k<o[Q4n0
-Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+R3
 IX63z6YkHj=U4FEB0ojKG20
-Z4 VDg1SIo80bB@j0V0VzS_@n1
+R4
 S1
 R0
 w1713630929
@@ -24,27 +74,27 @@ w1713630929
 F./SRC/RTL/full_adder.v
 !i122 2
 L0 1 10
-Z5 OV;L;2020.1;71
+R5
 r1
 !s85 0
 31
-Z6 !s108 1713723552.000000
+R6
 !s107 ./SRC/RTL/full_adder.v|
 !s90 -sv|-work|LIB|./SRC/RTL/full_adder.v|
 !i113 1
-Z7 o-sv -work LIB
-Z8 tCvgOpt 0
+R7
+R8
 vfull_adder_nbits
 R1
 R2
 !i10b 1
-!s100 o4EPD`G0al3cJ;U9^<0fW1
+!s100 B>13ZcX?[LW2DJj_jPP3Y0
 R3
-IQB86IBAmE8[IU=>G1EAT62
+IeKG6B7?JzC628PUl7<KdH1
 R4
 S1
 R0
-w1713722911
+w1713723888
 8./SRC/RTL/full_adder_nbits.v
 F./SRC/RTL/full_adder_nbits.v
 !i122 3
@@ -63,22 +113,22 @@ vfull_adder_nbits_tb
 R1
 R2
 !i10b 1
-!s100 oOIem49Fa09<]]_JB7IOM0
+!s100 K[2VR3>meY2@V^YDc<ic@0
 R3
-IjT3<0DPAM[BFYh3CB0CPE1
+I6[B>WDRS^f:D1R6_@0H^k0
 R4
 S1
 R0
-w1713723067
+w1713724264
 8./SRC/BENCH/full_adder_nbits_tb.v
 F./SRC/BENCH/full_adder_nbits_tb.v
-!i122 7
+!i122 8
 L0 3 49
 R5
 r1
 !s85 0
 31
-R6
+R9
 !s107 ./SRC/BENCH/full_adder_nbits_tb.v|
 !s90 -sv|-work|LIB|./SRC/BENCH/full_adder_nbits_tb.v|
 !i113 1
@@ -97,13 +147,13 @@ R0
 w1713652823
 8./SRC/BENCH/full_adder_tb.v
 F./SRC/BENCH/full_adder_tb.v
-!i122 6
+!i122 7
 L0 2 41
 R5
 r1
 !s85 0
 31
-R6
+R9
 !s107 ./SRC/BENCH/full_adder_tb.v|
 !s90 -sv|-work|LIB|./SRC/BENCH/full_adder_tb.v|
 !i113 1
@@ -111,7 +161,7 @@ R7
 R8
 vhalf_adder
 R1
-R2
+R10
 !i10b 1
 !s100 5DRZH5^GhU;]lg4]mBiFn3
 R3
@@ -147,13 +197,13 @@ R0
 w1713652851
 8./SRC/BENCH/half_adder_tb.v
 F./SRC/BENCH/half_adder_tb.v
-!i122 5
+!i122 6
 L0 2 21
 R5
 r1
 !s85 0
 31
-R6
+R9
 !s107 ./SRC/BENCH/half_adder_tb.v|
 !s90 -sv|-work|LIB|./SRC/BENCH/half_adder_tb.v|
 !i113 1
@@ -161,7 +211,7 @@ R7
 R8
 vor_gate
 R1
-R2
+R10
 !i10b 1
 !s100 fbhJT9d^SIY1b9ciCA@dL2
 R3
@@ -197,13 +247,13 @@ R0
 w1713652790
 8./SRC/BENCH/or_gate_tb.v
 F./SRC/BENCH/or_gate_tb.v
-!i122 4
+!i122 5
 L0 3 21
 R5
 r1
 !s85 0
 31
-R6
+R9
 !s107 ./SRC/BENCH/or_gate_tb.v|
 !s90 -sv|-work|LIB|./SRC/BENCH/or_gate_tb.v|
 !i113 1
