@@ -1,0 +1,58 @@
+#!/bin/bash
+
+export PROJECTNAME="."
+
+# Creation of libraries
+echo -e "\e[32mThe project location is : $PROJECTNAME\e[0m"
+echo -e "\e[32mRemoving libs\e[0m"
+vdel -lib $PROJECTNAME/LIB/LIB_RTL -all
+vdel -lib $PROJECTNAME/LIB/LIB_BENCH -all
+
+echo -e "\e[32mCreating library\e[0m"
+vlib $PROJECTNAME/LIB/LIB_RTL
+vmap LIB_RTL $PROJECTNAME/LIB/LIB_RTL
+vlib $PROJECTNAME/LIB/LIB_BENCH
+vmap LIB_BENCH $PROJECTNAME/LIB/LIB_BENCH
+
+# Compilation of RTL files
+echo -e "\e[33mCompile verilog sources\e[0m"
+# vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/xor_gate.vhd
+# vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/xor_4bits.vhd
+# vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/xor_nbits.vhd
+# vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/full_adder.vhd
+# vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/full_adder_nbits.vhd
+# vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/register_nbits.vhd
+# vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/mde_full_adder_moore.vhd
+# vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/full_adder_top.vhd
+# vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/reg_sel_gen.vhd
+# vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/mux_nbits.vhd
+echo -e "\e[33mEnd compilition of vhdl source\e[0m"
+
+# Compilation of testbench files
+echo -e "\e[35mCompile verilog test bench\e[0m"
+# vcom -work LIB_BENCH $PROJECTNAME/SRC/BENCH/xor_gate_tb.vhd
+# vcom -work LIB_BENCH $PROJECTNAME/SRC/BENCH/xor_4bits_tb.vhd
+# vcom -work LIB_BENCH $PROJECTNAME/SRC/BENCH/xor_nbits_tb.vhd
+# vcom -work LIB_BENCH $PROJECTNAME/SRC/BENCH/full_adder_tb.vhd
+# vcom -work LIB_BENCH $PROJECTNAME/SRC/BENCH/full_adder_nbits_tb.vhd
+# vcom -work LIB_BENCH $PROJECTNAME/SRC/BENCH/register_nbits_tb.vhd
+# vcom -work LIB_BENCH $PROJECTNAME/SRC/BENCH/mde_full_adder_moore_tb.vhd
+vcom -work LIB_BENCH $PROJECTNAME/SRC/BENCH/full_adder_top_tb.vhd
+#vcom -work LIB_BENCH $PROJECTNAME/SRC/BENCH/reg_sel_gen_tb.vhd
+#vcom -work LIB_BENCH $PROJECTNAME/SRC/BENCH/mux_nbits_tb.vhd
+echo -e "\e[35mEnd compilition of vhdl test bench\e[0m"
+# lancement du simulateur
+echo -e "\e[32mCompilation finished\e[0m"
+echo -e "\e[32mStart simulation...\e[0m"
+
+# ATTENTION un seul VSIM decommenté à la fois!
+# vsim LIB_BENCH.xor_gate_tb_conf # -do xor_gate_tb_wave.do
+# vsim LIB_BENCH.xor_4bits_tb_conf2 # -do xor_4bits_tb_wave.do
+# vsim LIB_BENCH.xor_nbits_tb_conf # -do xor_nbits_tb_wave.do
+# vsim LIB_BENCH.full_adder_tb_cfg # -do full_adder_tb_wave.do
+# vsim LIB_BENCH.full_adder_nbits_tb_cfg # -do full_adder_nbits_tb_wave.do
+# vsim LIB_BENCH.register_nbits_tb_cfg # -do register_nbits_tb_wave.do
+# vsim LIB_BENCH.mde_full_adder_moore_cfg # -do register_nbits_tb_wave.do
+# vsim LIB_BENCH.full_adder_top_cfg -do full_adder_top_tb_wave.do
+# vsim LIB_BENCH.reg_sel_gen_tb_cfg # -do reg_sel_gen_tb_wave.do
+# vsim LIB_BENCH.mux_nbits_tb_cfg # -do mux_tb_wave.do

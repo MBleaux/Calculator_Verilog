@@ -1,0 +1,12 @@
+# ** Warning: (vsim-8463) Multiple default top-level library specified using the -lib option. The later specification will override the previous one.
+# vsim -lib LIB_BENCH -c -do "run -all" or_gate_tb 
+# Start time: 15:59:06 on Apr 21,2024
+# Loading sv_std.std
+# Loading LIB_BENCH.or_gate_tb
+# ** Error: (vsim-3033) Instantiation of 'or_gate' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /or_gate_tb File: ./SRC/BENCH/or_gate_tb.v Line: 6
+#         Searched libraries:
+#             /home/mario/Verilog/Calculator/LIB/LIB_BENCH
+# Error loading design
+# End time: 15:59:07 on Apr 21,2024, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 1
