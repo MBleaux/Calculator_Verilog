@@ -35,6 +35,10 @@ echo -e "\e[33m---------------------------------------\e[0m"
     echo -e "\e[33m---------------------------------------\e[0m"
     vlog -sv -work LIB $PROJECTNAME/SRC/RTL/add_sub_nbits.v
     echo -e "\e[33m---------------------------------------\e[0m"
+    vlog -sv -work LIB $PROJECTNAME/SRC/RTL/full_adder_wcarry_nbits.v
+    echo -e "\e[33m---------------------------------------\e[0m"
+    vlog -sv -work LIB $PROJECTNAME/SRC/RTL/mult_nbits.v
+    echo -e "\e[33m---------------------------------------\e[0m"
 
 echo -e "\e[33mEnd of compilation of the RTL files!\e[0m"
 echo -e "\e[33m---------------------------------------\e[0m"
@@ -58,6 +62,10 @@ echo -e "\e[35m---------------------------------------\e[0m"
     echo -e "\e[35m---------------------------------------\e[0m"
     vlog -sv -work LIB $PROJECTNAME/SRC/BENCH/add_sub_nbits_tb.v
     echo -e "\e[35m---------------------------------------\e[0m"
+    vlog -sv -work LIB $PROJECTNAME/SRC/BENCH/full_adder_wcarry_nbits_tb.v
+    echo -e "\e[35m---------------------------------------\e[0m"
+    vlog -sv -work LIB $PROJECTNAME/SRC/BENCH/mult_nbits_tb.v
+    echo -e "\e[35m---------------------------------------\e[0m"
 
 echo -e "\e[35mEnd of compilation the testbench files!\e[0m"
 echo -e "\e[35m---------------------------------------\e[0m"
@@ -67,4 +75,4 @@ echo -e "\e[32m---------------------------------------\e[0m"
 echo -e "\e[32mCompilation finished!\e[0m"
 echo -e "\e[32m---------------------------------------\e[0m"
 
-vsim
+#vsim

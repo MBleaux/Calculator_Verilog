@@ -36,8 +36,6 @@ module add_sub_nbits #(
         end
     endgenerate
 
-    
-    //assign cout_o = ~temp_s[width];
     // Calculates the carry out
     always_comb begin
         if (sub_i) begin

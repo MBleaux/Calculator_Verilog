@@ -1,38 +1,39 @@
-vsim LIB.add_sub_nbits_tb
-# vsim LIB.add_sub_nbits_tb 
-# Start time: 22:06:07 on Apr 21,2024
+vsim LIB.full_adder_wcarry_nbits_tb
+# vsim LIB.full_adder_wcarry_nbits_tb 
+# Start time: 00:46:08 on Apr 22,2024
 # Loading sv_std.std
-# Loading LIB.add_sub_nbits_tb
-# Loading LIB.add_sub_nbits
+# Loading LIB.full_adder_wcarry_nbits_tb
+# Loading LIB.full_adder_wcarry_nbits
 # Loading LIB.full_adder
 # Loading LIB.half_adder
 # Loading LIB.or_gate
+add wave -position insertpoint sim:/full_adder_wcarry_nbits_tb/*
 run -all
-# Time =                    0: a = 00100100, b = 10000001, sub = 1, sum = 10100011, carry_out = 1
-# Teste passou: a = 00100100, b = 10000001, resultado = 10100011, Carry = 1
-# Time =                10000: a = 01100011, b = 00001101, sub = 1, sum = 01010110, carry_out = 0
-# Teste passou: a = 01100011, b = 00001101, resultado = 01010110, Carry = 0
-# Time =                20000: a = 01100101, b = 00010010, sub = 1, sum = 01010011, carry_out = 0
-# Teste passou: a = 01100101, b = 00010010, resultado = 01010011, Carry = 0
-# Time =                30000: a = 00001101, b = 01110110, sub = 1, sum = 10010111, carry_out = 1
-# Teste passou: a = 00001101, b = 01110110, resultado = 10010111, Carry = 1
-# Time =                40000: a = 11101101, b = 10001100, sub = 1, sum = 01100001, carry_out = 0
-# Teste passou: a = 11101101, b = 10001100, resultado = 01100001, Carry = 0
-# Time =                50000: a = 11000110, b = 11000101, sub = 0, sum = 10001011, carry_out = 1
-# Teste passou: a = 11000110, b = 11000101, resultado = 10001011, Carry = 1
-# Time =                60000: a = 11100101, b = 01110111, sub = 0, sum = 01011100, carry_out = 1
-# Teste passou: a = 11100101, b = 01110111, resultado = 01011100, Carry = 1
-# Time =                70000: a = 10001111, b = 11110010, sub = 0, sum = 10000001, carry_out = 1
-# Teste passou: a = 10001111, b = 11110010, resultado = 10000001, Carry = 1
-# Time =                80000: a = 11101000, b = 11000101, sub = 0, sum = 10101101, carry_out = 1
-# Teste passou: a = 11101000, b = 11000101, resultado = 10101101, Carry = 1
-# Time =                90000: a = 10111101, b = 00101101, sub = 1, sum = 10010000, carry_out = 0
-# Teste passou: a = 10111101, b = 00101101, resultado = 10010000, Carry = 0
-# ** Note: $finish    : ./SRC/BENCH/add_sub_nbits_tb.v(53)
-#    Time: 100 ns  Iteration: 0  Instance: /add_sub_nbits_tb
+# Time =                    0: a = 00100100, b = 10000001, sum = 010100101
+# Teste passou: a = 00100100, b = 10000001, resultado = 010100101
+# Time =                10000: a = 00001001, b = 01100011, sum = 001101100
+# Teste passou: a = 00001001, b = 01100011, resultado = 001101100
+# Time =                20000: a = 00001101, b = 10001101, sum = 010011010
+# Teste passou: a = 00001101, b = 10001101, resultado = 010011010
+# Time =                30000: a = 01100101, b = 00010010, sum = 001110111
+# Teste passou: a = 01100101, b = 00010010, resultado = 001110111
+# Time =                40000: a = 00000001, b = 00001101, sum = 000001110
+# Teste passou: a = 00000001, b = 00001101, resultado = 000001110
+# Time =                50000: a = 01110110, b = 00111101, sum = 010110011
+# Teste passou: a = 01110110, b = 00111101, resultado = 010110011
+# Time =                60000: a = 11101101, b = 10001100, sum = 101111001
+# Teste passou: a = 11101101, b = 10001100, resultado = 101111001
+# Time =                70000: a = 11111001, b = 11000110, sum = 110111111
+# Teste passou: a = 11111001, b = 11000110, resultado = 110111111
+# Time =                80000: a = 11000101, b = 10101010, sum = 101101111
+# Teste passou: a = 11000101, b = 10101010, resultado = 101101111
+# Time =                90000: a = 11100101, b = 01110111, sum = 101011100
+# Teste passou: a = 11100101, b = 01110111, resultado = 101011100
+# ** Note: $finish    : ./SRC/BENCH/full_adder_wcarry_nbits_tb.v(39)
+#    Time: 100 ns  Iteration: 0  Instance: /full_adder_wcarry_nbits_tb
 # 1
-# Break in Module add_sub_nbits_tb at ./SRC/BENCH/add_sub_nbits_tb.v line 53
+# Break in Module full_adder_wcarry_nbits_tb at ./SRC/BENCH/full_adder_wcarry_nbits_tb.v line 39
 # couldn't load file "/home/mario/intelFPGA/20.1/modelsim_ase/linux/ScintillaTk/libScintillaTk1.14.so": libstdc++.so.6: cannot open shared object file: No such file or directory
 # list element in quotes followed by ":" instead of space
-# End time: 22:07:54 on Apr 21,2024, Elapsed time: 0:01:47
+# End time: 00:49:51 on Apr 22,2024, Elapsed time: 0:03:43
 # Errors: 0, Warnings: 0

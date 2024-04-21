@@ -8,7 +8,7 @@ reg sub;
 wire [WIDTH-1:0] sum;
 wire carry_out;
 
-// Instanciar o módulo sub_nbits com a largura definida
+// Instantiate the add_sub_nbits module with the defined width
 add_sub_nbits #(.width(WIDTH)) dut (
     .a_i(a), 
     .b_i(b), 
@@ -18,42 +18,42 @@ add_sub_nbits #(.width(WIDTH)) dut (
 );
 
 initial begin
-    // Inicializar as entradas
+    // Initialize entries
     a = 0; b = 0;
     
-    // Ciclo de teste
+    // Test cycle
     repeat (10) begin
-        // Gerar valores aleatórios para a e b
+        // Generate random values for a, b and sub
         a = $random;
         b = $random;
         sub = $random;
         
-        // Esperar um pouco para que a adição aconteça
+        // Wait a while for the addition to take place
         #10;
         
-        // Verificar o resultado
+        // Check the result
         if (sub == 0) begin
             if (sum != a + b) begin
-                $display("Erro: a = %b, b = %b, esperado %b, obtido %b", a, b, a + b, sum);
+                $display("Error: a = %b, b = %b, expected %b, obtained %b", a, b, a + b, sum);
             end
             else begin
-                $display("Teste passou: a = %b, b = %b, resultado = %b, Carry = %b", a, b, sum, carry_out);
+                $display("Test approved: a = %b, b = %b, result = %b, Carry = %b", a, b, sum, carry_out);
             end
         end else begin
             if (sum != a - b) begin
-                $display("Erro: a = %b, b = %b, esperado %b, obtido %b", a, b, a - b, sum);
+                $display("Error: a = %b, b = %b, expected %b, obtained %b", a, b, a - b, sum);
             end
             else begin
-                $display("Teste passou: a = %b, b = %b, resultado = %b, Carry = %b", a, b, sum, carry_out);
+                $display("Test approved: a = %b, b = %b, result = %b, Carry = %b", a, b, sum, carry_out);
             end
         end
     end
     
-    // Terminar a simulação
+    // Finish the simulation
     $finish;
 end
 
-// Monitorar as mudanças nas variáveis
+// Monitoring changes in variables
 initial begin
     $monitor("Time = %t: a = %b, b = %b, sub = %b, sum = %b, carry_out = %b",
               $time, a, b, sub, sum, carry_out);
