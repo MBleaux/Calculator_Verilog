@@ -1,64 +1,19 @@
-vsim LIB.mult_nbits_tb
-# vsim LIB.mult_nbits_tb 
-# Start time: 14:20:04 on Apr 22,2024
+vsim LIB.fsm_tb
+# vsim LIB.fsm_tb 
+# Start time: 00:31:47 on Apr 23,2024
 # Loading sv_std.std
-# Loading LIB.mult_nbits_tb
-# Loading LIB.mult_nbits
+# Loading LIB.fsm_tb
+# Loading LIB.fsm
 run -all
-# Time =                    0: a = 00100100, b = 10000001, sum = 0001001000100100
-# Test approved: a = 00100100, b = 10000001, result = 0001001000100100
-# Time =                10000: a = 00001001, b = 01100011, sum = 0000001101111011
-# Test approved: a = 00001001, b = 01100011, result = 0000001101111011
-# Time =                20000: a = 00001101, b = 10001101, sum = 0000011100101001
-# Test approved: a = 00001101, b = 10001101, result = 0000011100101001
-# Time =                30000: a = 01100101, b = 00010010, sum = 0000011100011010
-# Test approved: a = 01100101, b = 00010010, result = 0000011100011010
-# Time =                40000: a = 00000001, b = 00001101, sum = 0000000000001101
-# Test approved: a = 00000001, b = 00001101, result = 0000000000001101
-# Time =                50000: a = 01110110, b = 00111101, sum = 0001110000011110
-# Test approved: a = 01110110, b = 00111101, result = 0001110000011110
-# Time =                60000: a = 11101101, b = 10001100, sum = 1000000110011100
-# Test approved: a = 11101101, b = 10001100, result = 1000000110011100
-# Time =                70000: a = 11111001, b = 11000110, sum = 1100000010010110
-# Test approved: a = 11111001, b = 11000110, result = 1100000010010110
-# Time =                80000: a = 11000101, b = 10101010, sum = 1000001011010010
-# Test approved: a = 11000101, b = 10101010, result = 1000001011010010
-# Time =                90000: a = 11100101, b = 01110111, sum = 0110101001110011
-# Test approved: a = 11100101, b = 01110111, result = 0110101001110011
-# ** Note: $finish    : ./SRC/BENCH/mult_nbits_tb.v(39)
-#    Time: 100 ns  Iteration: 0  Instance: /mult_nbits_tb
+# Time = 0, State Outputs: a_we_o = 0, a_rst_o = 0, b_we_o = 0, b_rst_o = 0, fct_we_o = 0, fct_rst_o = 0, s_we_o = 0, s_rst_o = 0, signal_we_o = 0, signal_rst_o = 0
+# Time = 45000, State Outputs: a_we_o = 1, a_rst_o = 1, b_we_o = 1, b_rst_o = 1, fct_we_o = 1, fct_rst_o = 1, s_we_o = 0, s_rst_o = 0, signal_we_o = 0, signal_rst_o = 0
+# Time = 55000, State Outputs: a_we_o = 0, a_rst_o = 1, b_we_o = 0, b_rst_o = 1, fct_we_o = 0, fct_rst_o = 1, s_we_o = 0, s_rst_o = 0, signal_we_o = 0, signal_rst_o = 0
+# Time = 65000, State Outputs: a_we_o = 0, a_rst_o = 1, b_we_o = 0, b_rst_o = 1, fct_we_o = 0, fct_rst_o = 1, s_we_o = 1, s_rst_o = 1, signal_we_o = 1, signal_rst_o = 1
+# Time = 75000, State Outputs: a_we_o = 0, a_rst_o = 1, b_we_o = 0, b_rst_o = 1, fct_we_o = 0, fct_rst_o = 1, s_we_o = 0, s_rst_o = 1, signal_we_o = 0, signal_rst_o = 1
+# Time = 85000, State Outputs: a_we_o = 0, a_rst_o = 0, b_we_o = 0, b_rst_o = 0, fct_we_o = 0, fct_rst_o = 0, s_we_o = 0, s_rst_o = 0, signal_we_o = 0, signal_rst_o = 0
+# ** Note: $finish    : ./SRC/BENCH/fsm_tb.v(49)
+#    Time: 100 ns  Iteration: 0  Instance: /fsm_tb
 # 1
-# Break in Module mult_nbits_tb at ./SRC/BENCH/mult_nbits_tb.v line 39
+# Break in Module fsm_tb at ./SRC/BENCH/fsm_tb.v line 49
 # couldn't load file "/home/mario/intelFPGA/20.1/modelsim_ase/linux/ScintillaTk/libScintillaTk1.14.so": libstdc++.so.6: cannot open shared object file: No such file or directory
 # list element in quotes followed by ":" instead of space
-add wave -position insertpoint sim:/mult_nbits_tb/*
-restart
-run -all
-# Time =                    0: a = 00100100, b = 10000001, sum = 0001001000100100
-# Test approved: a = 00100100, b = 10000001, result = 0001001000100100
-# Time =                10000: a = 00001001, b = 01100011, sum = 0000001101111011
-# Test approved: a = 00001001, b = 01100011, result = 0000001101111011
-# Time =                20000: a = 00001101, b = 10001101, sum = 0000011100101001
-# Test approved: a = 00001101, b = 10001101, result = 0000011100101001
-# Time =                30000: a = 01100101, b = 00010010, sum = 0000011100011010
-# Test approved: a = 01100101, b = 00010010, result = 0000011100011010
-# Time =                40000: a = 00000001, b = 00001101, sum = 0000000000001101
-# Test approved: a = 00000001, b = 00001101, result = 0000000000001101
-# Time =                50000: a = 01110110, b = 00111101, sum = 0001110000011110
-# Test approved: a = 01110110, b = 00111101, result = 0001110000011110
-# Time =                60000: a = 11101101, b = 10001100, sum = 1000000110011100
-# Test approved: a = 11101101, b = 10001100, result = 1000000110011100
-# Time =                70000: a = 11111001, b = 11000110, sum = 1100000010010110
-# Test approved: a = 11111001, b = 11000110, result = 1100000010010110
-# Time =                80000: a = 11000101, b = 10101010, sum = 1000001011010010
-# Test approved: a = 11000101, b = 10101010, result = 1000001011010010
-# Time =                90000: a = 11100101, b = 01110111, sum = 0110101001110011
-# Test approved: a = 11100101, b = 01110111, result = 0110101001110011
-# ** Note: $finish    : ./SRC/BENCH/mult_nbits_tb.v(39)
-#    Time: 100 ns  Iteration: 0  Instance: /mult_nbits_tb
-# 1
-# Break in Module mult_nbits_tb at ./SRC/BENCH/mult_nbits_tb.v line 39
-# couldn't load file "/home/mario/intelFPGA/20.1/modelsim_ase/linux/ScintillaTk/libScintillaTk1.14.so": libstdc++.so.6: cannot open shared object file: No such file or directory
-# list element in quotes followed by ":" instead of space
-# End time: 14:21:14 on Apr 22,2024, Elapsed time: 0:01:10
-# Errors: 0, Warnings: 0

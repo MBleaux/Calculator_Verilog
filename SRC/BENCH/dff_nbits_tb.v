@@ -6,11 +6,11 @@ module dff_nbits_tb();
 // Internal net declaration
 parameter width = 8;
 reg [width-1:0] d_s;
-reg clock_s, resetb_s;
+reg clock_s, reset_s, we_s;
 wire [width-1:0] q_s;
 
 // DUT : component instanciation
-dff_nbits #(.width(width)) dut (.d_i(d_s), .clock_i(clock_s), .resetb_i(resetb_s), .q_o(q_s));
+dff_nbits #(.width(width)) dut (.d_i(d_s), .clock_i(clock_s), .reset_i(reset_s), .we_s(we_s), .q_o(q_s));
 
 // Clock generation
 initial begin
@@ -22,16 +22,17 @@ end
 
 // Stimuli
 initial begin
-    resetb_s = 0;
+    reset_s = 0;
+    we_s = 1;
     d_s = $random;
     #50;
-    resetb_s = 1;
+    reset_s = 1;
     #25;
     d_s = $random;
     #50;
     d_s = $random;
     #50;
-    resetb_s = 0;
+    reset_s = 0;
     #25;
     d_s = $random;
 end
