@@ -31,11 +31,13 @@ echo -e "\e[33m---------------------------------------\e[0m"
     echo -e "\e[33m---------------------------------------\e[0m"
     vlog -sv -work LIB $PROJECTNAME/SRC/RTL/dff_nbits.v
     echo -e "\e[33m---------------------------------------\e[0m"
-    vlog -sv -work LIB $PROJECTNAME/SRC/RTL/sub_nbits.v
+    vlog -sv -work LIB $PROJECTNAME/SRC/RTL/full_sub_nbits.v
     echo -e "\e[33m---------------------------------------\e[0m"
     vlog -sv -work LIB $PROJECTNAME/SRC/RTL/add_sub_nbits.v
     echo -e "\e[33m---------------------------------------\e[0m"
     vlog -sv -work LIB $PROJECTNAME/SRC/RTL/full_adder_wcarry_nbits.v
+    echo -e "\e[33m---------------------------------------\e[0m"
+    vlog -sv -work LIB $PROJECTNAME/SRC/RTL/full_sub_wborrow_nbits.v
     echo -e "\e[33m---------------------------------------\e[0m"
     vlog -sv -work LIB $PROJECTNAME/SRC/RTL/mult_nbits.v
     echo -e "\e[33m---------------------------------------\e[0m"
@@ -58,11 +60,13 @@ echo -e "\e[35m---------------------------------------\e[0m"
     echo -e "\e[35m---------------------------------------\e[0m"
     vlog -sv -work LIB $PROJECTNAME/SRC/BENCH/dff_nbits_tb.v
     echo -e "\e[35m---------------------------------------\e[0m"
-    vlog -sv -work LIB $PROJECTNAME/SRC/BENCH/sub_nbits_tb.v
+    vlog -sv -work LIB $PROJECTNAME/SRC/BENCH/full_sub_nbits_tb.v
     echo -e "\e[35m---------------------------------------\e[0m"
     vlog -sv -work LIB $PROJECTNAME/SRC/BENCH/add_sub_nbits_tb.v
     echo -e "\e[35m---------------------------------------\e[0m"
     vlog -sv -work LIB $PROJECTNAME/SRC/BENCH/full_adder_wcarry_nbits_tb.v
+    echo -e "\e[35m---------------------------------------\e[0m"
+    vlog -sv -work LIB $PROJECTNAME/SRC/BENCH/full_sub_wborrow_nbits_tb.v
     echo -e "\e[35m---------------------------------------\e[0m"
     vlog -sv -work LIB $PROJECTNAME/SRC/BENCH/mult_nbits_tb.v
     echo -e "\e[35m---------------------------------------\e[0m"

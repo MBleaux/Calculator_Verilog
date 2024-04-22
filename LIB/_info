@@ -11,24 +11,24 @@ cModel Technology
 Z0 d/home/mario/Verilog/Calculator_Verilog
 vadd_sub_nbits
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1713740958
+Z2 !s110 1713788393
 !i10b 1
-!s100 CYAcY3D9CceA3XRFLN]K31
+!s100 jl>1oXGV<gEo0NB`a:SYH1
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IP0Bh_U8@n7LcPaWN1hVEX2
+INe@X32n>W5:cSz9H:_IU40
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1713737394
+w1713781977
 8./SRC/RTL/add_sub_nbits.v
 F./SRC/RTL/add_sub_nbits.v
 !i122 6
-L0 1 48
+L0 12 48
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1713740958.000000
+Z6 !s108 1713788393.000000
 !s107 ./SRC/RTL/add_sub_nbits.v|
 !s90 -sv|-work|LIB|./SRC/RTL/add_sub_nbits.v|
 !i113 1
@@ -36,24 +36,24 @@ Z7 o-sv -work LIB
 Z8 tCvgOpt 0
 vadd_sub_nbits_tb
 R1
-R2
+Z9 !s110 1713788394
 !i10b 1
-!s100 R5Vo[EMWclS8Fl<5V:?4z1
+!s100 0hHZf?8eQLU[f:6O4HfaT1
 R3
-I8E9]Vm<Y;lkB>iLgY5=aO2
+Ih4S86<FfYQEQ4ankg8zMO1
 R4
 S1
 R0
-w1713729415
+Z10 w1713741900
 8./SRC/BENCH/add_sub_nbits_tb.v
 F./SRC/BENCH/add_sub_nbits_tb.v
-!i122 14
+!i122 16
 L0 3 60
 R5
 r1
 !s85 0
 31
-R6
+Z11 !s108 1713788394.000000
 !s107 ./SRC/BENCH/add_sub_nbits_tb.v|
 !s90 -sv|-work|LIB|./SRC/BENCH/add_sub_nbits_tb.v|
 !i113 1
@@ -63,22 +63,22 @@ vdff_nbits
 R1
 R2
 !i10b 1
-!s100 DOX`6iY9TSb9JO[aB8z[12
+!s100 H0P8B:jEnfz:S_:o:;1@13
 R3
-II[o]S0Il]mKWHVn]N`9D^2
+IQ<XjRI9f3F8oY7E?JL[T81
 R4
 S1
 R0
-w1713725019
+w1713781975
 8./SRC/RTL/dff_nbits.v
 F./SRC/RTL/dff_nbits.v
 !i122 4
-L0 1 15
+L0 11 15
 R5
 r1
 !s85 0
 31
-Z9 !s108 1713740957.000000
+R6
 !s107 ./SRC/RTL/dff_nbits.v|
 !s90 -sv|-work|LIB|./SRC/RTL/dff_nbits.v|
 !i113 1
@@ -86,7 +86,7 @@ R7
 R8
 vdff_nbits_tb
 R1
-R2
+R9
 !i10b 1
 !s100 7jnQ849mj;4l]`W_igWjV0
 R3
@@ -94,16 +94,16 @@ IXGBh0QoHI8IJ^kXN:W[VG3
 R4
 S1
 R0
-w1713724597
+R10
 8./SRC/BENCH/dff_nbits_tb.v
 F./SRC/BENCH/dff_nbits_tb.v
-!i122 12
+!i122 14
 L0 4 35
 R5
 r1
 !s85 0
 31
-R6
+R11
 !s107 ./SRC/BENCH/dff_nbits_tb.v|
 !s90 -sv|-work|LIB|./SRC/BENCH/dff_nbits_tb.v|
 !i113 1
@@ -111,24 +111,24 @@ R7
 R8
 vfull_adder
 R1
-Z10 !s110 1713740957
+R2
 !i10b 1
-!s100 5Z[gGNF?U?Fc1@k<o[Q4n0
+!s100 bmkkZd^oD[Kai`1a[k6oC3
 R3
-IX63z6YkHj=U4FEB0ojKG20
+I^bj[G`PTJ?AU9MA@F[aaY0
 R4
 S1
 R0
-w1713630929
+w1713782210
 8./SRC/RTL/full_adder.v
 F./SRC/RTL/full_adder.v
 !i122 2
-L0 1 10
+L0 12 10
 R5
 r1
 !s85 0
 31
-R9
+R6
 !s107 ./SRC/RTL/full_adder.v|
 !s90 -sv|-work|LIB|./SRC/RTL/full_adder.v|
 !i113 1
@@ -138,22 +138,22 @@ vfull_adder_nbits
 R1
 R2
 !i10b 1
-!s100 YB6W4_=Wl2Fi7DagCF2R20
+!s100 ojiPS@^d4mUGFJf5MSUUC1
 R3
-IABSYE]?A5I3ATfW;kZC[S3
+I^mf04W6^Y2AG>e<VecF6e1
 R4
 S1
 R0
-w1713737742
+w1713782175
 8./SRC/RTL/full_adder_nbits.v
 F./SRC/RTL/full_adder_nbits.v
 !i122 3
-L0 1 24
+L0 12 23
 R5
 r1
 !s85 0
 31
-R9
+R6
 !s107 ./SRC/RTL/full_adder_nbits.v|
 !s90 -sv|-work|LIB|./SRC/RTL/full_adder_nbits.v|
 !i113 1
@@ -161,24 +161,24 @@ R7
 R8
 vfull_adder_nbits_tb
 R1
-R2
+R9
 !i10b 1
-!s100 lJoSVoG@T78kcf3OB][4;0
+!s100 Ph0ag??ML0a^D`1`L372[0
 R3
-I@MzULm_PfWlMc@_Q_M^R@2
+I;cV>fBcbOh[QiO;X:4JgO3
 R4
 S1
 R0
-w1713728005
+w1713787514
 8./SRC/BENCH/full_adder_nbits_tb.v
 F./SRC/BENCH/full_adder_nbits_tb.v
-!i122 11
-Z11 L0 3 48
+!i122 13
+Z12 L0 3 46
 R5
 r1
 !s85 0
 31
-R6
+R11
 !s107 ./SRC/BENCH/full_adder_nbits_tb.v|
 !s90 -sv|-work|LIB|./SRC/BENCH/full_adder_nbits_tb.v|
 !i113 1
@@ -186,7 +186,7 @@ R7
 R8
 vfull_adder_tb
 R1
-R2
+R9
 !i10b 1
 !s100 <27?R38Un=58kG<i=5IVO0
 R3
@@ -197,13 +197,13 @@ R0
 w1713652823
 8./SRC/BENCH/full_adder_tb.v
 F./SRC/BENCH/full_adder_tb.v
-!i122 10
+!i122 12
 L0 2 41
 R5
 r1
 !s85 0
 31
-R6
+R11
 !s107 ./SRC/BENCH/full_adder_tb.v|
 !s90 -sv|-work|LIB|./SRC/BENCH/full_adder_tb.v|
 !i113 1
@@ -213,17 +213,17 @@ vfull_adder_wcarry_nbits
 R1
 R2
 !i10b 1
-!s100 bldlS<N6jk6_^LE@L_WA73
+!s100 z?5JFnMz@cnea<LBa[S]C2
 R3
-Ioc?m88PMLUfW]1KQbOial0
+I?@WjH=2[;2BWYW4R>>INJ2
 R4
 S1
 R0
-w1713737868
+w1713782139
 8./SRC/RTL/full_adder_wcarry_nbits.v
 F./SRC/RTL/full_adder_wcarry_nbits.v
 !i122 7
-L0 1 23
+L0 12 24
 R5
 r1
 !s85 0
@@ -236,49 +236,149 @@ R7
 R8
 vfull_adder_wcarry_nbits_tb
 R1
-R2
+R9
 !i10b 1
-!s100 eP<GCm>c4B6i^MiPGY38e3
+!s100 Y:6:zkINg7P`];;jPldkV3
 R3
-ITM>c1bINcI454_TBogC^J3
+I0fR=zC8[3f^S2=Uo0bjFf0
 R4
 S1
 R0
-w1713739319
+w1713782547
 8./SRC/BENCH/full_adder_wcarry_nbits_tb.v
 F./SRC/BENCH/full_adder_wcarry_nbits_tb.v
-!i122 15
-Z12 L0 3 46
+!i122 17
+Z13 L0 3 48
 R5
 r1
 !s85 0
 31
-R6
+R11
 !s107 ./SRC/BENCH/full_adder_wcarry_nbits_tb.v|
 !s90 -sv|-work|LIB|./SRC/BENCH/full_adder_wcarry_nbits_tb.v|
 !i113 1
 R7
 R8
-vhalf_adder
+vfull_sub_nbits
 R1
-R10
+R2
 !i10b 1
-!s100 5DRZH5^GhU;]lg4]mBiFn3
+!s100 JACg9L2NQ[nUKHc:o^oF>3
 R3
-IZiHcKDCMI5YzbEL3gRb3;0
+IkBg8k8]T0Pino6I05KR@c3
 R4
 S1
 R0
-w1713646031
-8./SRC/RTL/half_adder.v
-F./SRC/RTL/half_adder.v
-!i122 1
-L0 1 7
+w1713782863
+8./SRC/RTL/full_sub_nbits.v
+F./SRC/RTL/full_sub_nbits.v
+!i122 5
+L0 12 30
 R5
 r1
 !s85 0
 31
+R6
+!s107 ./SRC/RTL/full_sub_nbits.v|
+!s90 -sv|-work|LIB|./SRC/RTL/full_sub_nbits.v|
+!i113 1
+R7
+R8
+vfull_sub_nbits_tb
+R1
 R9
+!i10b 1
+!s100 gDRzn@=dW=0MIWIL^BU>a0
+R3
+IzN7TnS9N=JcdDRl0dI9f93
+R4
+S1
+R0
+w1713783028
+8./SRC/BENCH/full_sub_nbits_tb.v
+F./SRC/BENCH/full_sub_nbits_tb.v
+!i122 15
+R12
+R5
+r1
+!s85 0
+31
+R11
+!s107 ./SRC/BENCH/full_sub_nbits_tb.v|
+!s90 -sv|-work|LIB|./SRC/BENCH/full_sub_nbits_tb.v|
+!i113 1
+R7
+R8
+vfull_sub_wborrow_nbits
+R1
+R2
+!i10b 1
+!s100 f8VcS^9V:4YZ3Z2VK1c3:2
+R3
+I5GRTjZKP:S>ig1F8AP9@C2
+R4
+S1
+R0
+w1713782621
+8./SRC/RTL/full_sub_wborrow_nbits.v
+F./SRC/RTL/full_sub_wborrow_nbits.v
+!i122 8
+L0 12 31
+R5
+r1
+!s85 0
+31
+R6
+!s107 ./SRC/RTL/full_sub_wborrow_nbits.v|
+!s90 -sv|-work|LIB|./SRC/RTL/full_sub_wborrow_nbits.v|
+!i113 1
+R7
+R8
+vfull_sub_wborrow_nbits_tb
+R1
+R9
+!i10b 1
+!s100 <4gFPa:14@8l:X[Jha?270
+R3
+IA0>EDTQnN;ik6FbTO[?H^3
+R4
+S1
+R0
+w1713783621
+8./SRC/BENCH/full_sub_wborrow_nbits_tb.v
+F./SRC/BENCH/full_sub_wborrow_nbits_tb.v
+!i122 18
+R13
+R5
+r1
+!s85 0
+31
+R11
+!s107 ./SRC/BENCH/full_sub_wborrow_nbits_tb.v|
+!s90 -sv|-work|LIB|./SRC/BENCH/full_sub_wborrow_nbits_tb.v|
+!i113 1
+R7
+R8
+vhalf_adder
+R1
+R2
+!i10b 1
+!s100 ATD4:U<]_4:_jlOZcmO4?1
+R3
+IfmS<^n;Z<_TSQ`ZSieb4J1
+R4
+S1
+R0
+w1713782255
+8./SRC/RTL/half_adder.v
+F./SRC/RTL/half_adder.v
+!i122 1
+L0 12 7
+R5
+r1
+!s85 0
+31
+R6
 !s107 ./SRC/RTL/half_adder.v|
 !s90 -sv|-work|LIB|./SRC/RTL/half_adder.v|
 !i113 1
@@ -286,7 +386,7 @@ R7
 R8
 vhalf_adder_tb
 R1
-R2
+R9
 !i10b 1
 !s100 B9<V>[8L_dGChl8Pn8M`Q3
 R3
@@ -297,38 +397,63 @@ R0
 w1713652851
 8./SRC/BENCH/half_adder_tb.v
 F./SRC/BENCH/half_adder_tb.v
-!i122 9
+!i122 11
 L0 2 21
 R5
 r1
 !s85 0
 31
-R6
+R11
 !s107 ./SRC/BENCH/half_adder_tb.v|
 !s90 -sv|-work|LIB|./SRC/BENCH/half_adder_tb.v|
 !i113 1
 R7
 R8
-vmult_nbits_tb
+vmult_nbits
 R1
-R2
+R9
 !i10b 1
-!s100 A`PzVNXkP6od0;?6PCK5>1
+!s100 R`b3nDC_bCzI9f;VcDG0f1
 R3
-IzX0@V@CCYR`eSj`nJQjYC2
+I`8l1TLG2ShXZ?2IV1aGKD1
 R4
 S1
 R0
-w1713739533
-8./SRC/BENCH/mult_nbits_tb.v
-F./SRC/BENCH/mult_nbits_tb.v
-!i122 16
-R12
+w1713788389
+8./SRC/RTL/mult_nbits.v
+F./SRC/RTL/mult_nbits.v
+!i122 9
+L0 1 43
 R5
 r1
 !s85 0
 31
 R6
+!s107 ./SRC/RTL/mult_nbits.v|
+!s90 -sv|-work|LIB|./SRC/RTL/mult_nbits.v|
+!i113 1
+R7
+R8
+vmult_nbits_tb
+R1
+R9
+!i10b 1
+!s100 @Ui`<Nj]aKZ@dI[N4h8US2
+R3
+IBoMYVSk_0@F:n<jT>?;LB3
+R4
+S1
+R0
+w1713784624
+8./SRC/BENCH/mult_nbits_tb.v
+F./SRC/BENCH/mult_nbits_tb.v
+!i122 19
+R12
+R5
+r1
+!s85 0
+31
+R11
 !s107 ./SRC/BENCH/mult_nbits_tb.v|
 !s90 -sv|-work|LIB|./SRC/BENCH/mult_nbits_tb.v|
 !i113 1
@@ -336,24 +461,24 @@ R7
 R8
 vor_gate
 R1
-R10
+R2
 !i10b 1
-!s100 fbhJT9d^SIY1b9ciCA@dL2
+!s100 aiL<fXjDk2z=1XUJ>LgCT3
 R3
-IU[[`0moZF7@X;cXB[?f_i1
+IZS8bZTOG`l75XVWh=>`Og2
 R4
 S1
 R0
-w1713628859
+w1713782322
 8./SRC/RTL/or_gate.v
 F./SRC/RTL/or_gate.v
 !i122 0
-L0 1 6
+L0 11 6
 R5
 r1
 !s85 0
 31
-R9
+R6
 !s107 ./SRC/RTL/or_gate.v|
 !s90 -sv|-work|LIB|./SRC/RTL/or_gate.v|
 !i113 1
@@ -361,7 +486,7 @@ R7
 R8
 vor_gate_tb
 R1
-R2
+R9
 !i10b 1
 !s100 aM=9ARAnFLNAiHl]6BGbg0
 R3
@@ -372,65 +497,15 @@ R0
 w1713652790
 8./SRC/BENCH/or_gate_tb.v
 F./SRC/BENCH/or_gate_tb.v
-!i122 8
+!i122 10
 L0 3 21
 R5
 r1
 !s85 0
 31
-R6
+R11
 !s107 ./SRC/BENCH/or_gate_tb.v|
 !s90 -sv|-work|LIB|./SRC/BENCH/or_gate_tb.v|
-!i113 1
-R7
-R8
-vsub_nbits
-R1
-R2
-!i10b 1
-!s100 2U_IA9d5HgKXAQPRND;II3
-R3
-Ie2OKW0Go=F0SH3=FLCzE?3
-R4
-S1
-R0
-w1713728136
-8./SRC/RTL/sub_nbits.v
-F./SRC/RTL/sub_nbits.v
-!i122 5
-L0 1 31
-R5
-r1
-!s85 0
-31
-R6
-!s107 ./SRC/RTL/sub_nbits.v|
-!s90 -sv|-work|LIB|./SRC/RTL/sub_nbits.v|
-!i113 1
-R7
-R8
-vsub_nbits_tb
-R1
-R2
-!i10b 1
-!s100 ?@<QZNUQilBPag7oTX?_:2
-R3
-IN^Can_GZ0eiUj]LOA@_?]2
-R4
-S1
-R0
-w1713727984
-8./SRC/BENCH/sub_nbits_tb.v
-F./SRC/BENCH/sub_nbits_tb.v
-!i122 13
-R11
-R5
-r1
-!s85 0
-31
-R6
-!s107 ./SRC/BENCH/sub_nbits_tb.v|
-!s90 -sv|-work|LIB|./SRC/BENCH/sub_nbits_tb.v|
 !i113 1
 R7
 R8

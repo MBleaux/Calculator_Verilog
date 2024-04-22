@@ -1,37 +1,47 @@
 module mult_nbits #(
     parameter width = 8
 ) (
-    input logic[width-1:0] a_i, b_i,
-    output logic[2*width:0] s_o
+    input logic [width-1:0] a_i, b_i,
+    output logic [2*width-1:0] s_o
 );
-    logic[2*width-1:0] tmp1_s = 0, tmp2_s = 0;
-    logic[2*width:0] tmp_s = 0;
-    logic[width:0] tmp3_s;
-    genvar i;
+    logic [2*width-1:0] accumulator;
 
-    // always_comb block ensures that the logic behaves as combinational
     always_comb begin
-        tmp1_s = 0;  // Reset the accumulator at the beginning of each evaluation
-        for (i = 0; i <= width-1; i++) begin
+        int i;  // Declare loop variable as an integer
+        accumulator = 0;  // Reset the accumulator at the beginning of each evaluation
+        for (i = 0; i < width; i++) begin
             if (b_i[i]) begin
-                // Perform a_i + a_i
-                full_adder_wcarry_nbits #(.width(width)) fa1 (
-                    .a_i(a_i), 
-                    .b_i(a_i), 
-                    .s_o(tmp3_s)
-                );
-                // Align tmp3_s to the correct bit position
-                tmp2_s = {{(width-i){1'b0}}, tmp3_s[width:0], {(i){1'b0}}};
-                // Add aligned result to tmp1_s
-                full_adder_wcarry_nbits #(.width(2*width-1)) fa2 (
-                    .a_i(tmp1_s), 
-                    .b_i(tmp2_s), 
-                    .s_o(tmp_s)
-                );
-                tmp1_s = tmp_s;  // Store the result for the next iteration
+                accumulator += a_i << i;  // Accumulate shifted value into accumulator
             end
         end
+        s_o = accumulator;  // Output the final result
     end
 
-    assign s_o = tmp1_s;  // Output the final result
+    /*
+    Original idea was to use full_adder_nbits for adding when b_i[i] is true,
+    but there's an error that does not allowed to use it, reporting that compiler
+    can not find that full_adder_nbits's module.
+
+    logic [2*width-2:0] accumulator, temp;
+    logic [2*width-1:0] extended_accumulator;
+
+    always_comb begin
+        int i;  // Declare loop variable as an integer
+        temp = 0; // Reset the accumulator at the beginning of each evaluation
+        accumulator = 0;  // Reset the accumulator at the beginning of each evaluation
+        extended_accumulator = 0;  // Initialize extended accumulator
+        for (i = 0; i <= width-1; i++) begin
+            if (b_i[i]) begin
+                temp = {{(width-2){1'b0}}, a_i} << i;
+                full_adder_nbits #(.width(2*width-1)) fa (
+                    .a_i(accumulator), 
+                    .b_i(temp), 
+                    .s_o(extended_accumulator)
+                );
+                accumulator = extended_accumulator[2*width-2:0];  // Ignore the extra carry bit for the next iteration
+            end
+        end
+        s_o = extended_accumulator[2*width-1:0];  // Output the final result
+    end
+    */
 endmodule

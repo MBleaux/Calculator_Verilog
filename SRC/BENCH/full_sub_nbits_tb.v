@@ -1,18 +1,16 @@
 `timescale 1ns / 1ps
 
-module sub_nbits_tb();
+module full_sub_nbits_tb();
 
 parameter WIDTH = 8;
 reg [WIDTH-1:0] a, b;
-wire [WIDTH-1:0] sum;
-wire carry_out;
+wire [WIDTH:0] sum;
 
-// Instantiate the sub_nbits module with the defined width
-sub_nbits #(.width(WIDTH)) dut (
+// Instantiate the full_sub_nbits module with the defined width
+full_sub_nbits #(.width(WIDTH)) dut (
     .a_i(a), 
     .b_i(b), 
-    .s_o(sum), 
-    .cout_o(carry_out)
+    .s_o(sum)
 );
 
 initial begin
@@ -33,7 +31,7 @@ initial begin
             $display("Error: a = %b, b = %b, expected %b, obtained %b", a, b, a - b, sum);
         end
         else begin
-            $display("Test approved: a = %b, b = %b, result = %b, Carry = %b", a, b, sum, carry_out);
+            $display("Test approved: a = %b, b = %b, result = %b", a, b, sum);
         end
     end
     
@@ -43,8 +41,8 @@ end
 
 // Monitoring changes in variables
 initial begin
-    $monitor("Time = %t: a = %b, b = %b, sum = %b, carry_out = %b",
-              $time, a, b, sum, carry_out);
+    $monitor("Time = %t: a = %b, b = %b, sum = %b",
+              $time, a, b, sum);
 end
 
 endmodule

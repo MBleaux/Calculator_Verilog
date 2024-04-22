@@ -1,4 +1,15 @@
-module sub_nbits #(
+/**
+ * @file full_sub_wborrow_nbits
+ * @author Mario Araujo (gmarioaraujo@gmail.com)
+ * @brief Substraction for n bits
+ *        The results are the sum by complement by 2 and the borrow out, separately
+ * @version 0.1
+ * @date 2024-04-22
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
+module full_sub_wborrow_nbits #(
     parameter width = 8
 ) (
     input logic [width-1:0] a_i, b_i,

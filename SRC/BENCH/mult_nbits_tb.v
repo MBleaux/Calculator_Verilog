@@ -4,7 +4,7 @@ module mult_nbits_tb();
 
 parameter WIDTH = 8;
 reg [WIDTH-1:0] a, b;
-wire [2*WIDTH:0] sum;
+wire [2*WIDTH-1:0] sum;
 
 // Instantiate the mult_nbits module with the defined width
 mult_nbits #(.width(WIDTH)) dut (

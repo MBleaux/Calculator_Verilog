@@ -1,3 +1,14 @@
+/**
+ * @file add_sub_nbits
+ * @author Mario Araujo (gmarioaraujo@gmail.com)
+ * @brief Addition or Substraction on fonction the parameter sub_i for n bits
+ *        if sub_i = 0 is addition, otherwise is substraction
+ * @version 0.1
+ * @date 2024-04-22
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 module add_sub_nbits #(
     parameter width = 8
 ) (
