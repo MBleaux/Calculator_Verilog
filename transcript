@@ -1,19 +1,41 @@
-vsim LIB.fsm_tb
-# vsim LIB.fsm_tb 
-# Start time: 00:31:47 on Apr 23,2024
+vsim LIB.top_level_tb
+# vsim LIB.top_level_tb 
+# Start time: 11:35:10 on Apr 23,2024
 # Loading sv_std.std
-# Loading LIB.fsm_tb
+# Loading LIB.top_level_tb
+# Loading LIB.top_level
+# Loading LIB.dff_nbits
 # Loading LIB.fsm
+# Loading LIB.alu
+# Loading LIB.full_adder_nbits
+# Loading LIB.full_sub_nbits
+# Loading LIB.mult_nbits
+# Loading LIB.comp
+# Loading LIB.full_adder
+# Loading LIB.half_adder
+# Loading LIB.or_gate
+# ** Warning: (vsim-3015) [PCDPC] - Port size (15) does not match connection size (16) for port 'd_i'. The port definition is at: ./SRC/RTL/dff_nbits.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/dut/reg_s File: ./SRC/RTL/top_level.v Line: 62
+# ** Warning: (vsim-3015) [PCDPC] - Port size (15) does not match connection size (16) for port 'q_o'. The port definition is at: ./SRC/RTL/dff_nbits.v(16).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/dut/reg_s File: ./SRC/RTL/top_level.v Line: 62
 run -all
-# Time = 0, State Outputs: a_we_o = 0, a_rst_o = 0, b_we_o = 0, b_rst_o = 0, fct_we_o = 0, fct_rst_o = 0, s_we_o = 0, s_rst_o = 0, signal_we_o = 0, signal_rst_o = 0
-# Time = 45000, State Outputs: a_we_o = 1, a_rst_o = 1, b_we_o = 1, b_rst_o = 1, fct_we_o = 1, fct_rst_o = 1, s_we_o = 0, s_rst_o = 0, signal_we_o = 0, signal_rst_o = 0
-# Time = 55000, State Outputs: a_we_o = 0, a_rst_o = 1, b_we_o = 0, b_rst_o = 1, fct_we_o = 0, fct_rst_o = 1, s_we_o = 0, s_rst_o = 0, signal_we_o = 0, signal_rst_o = 0
-# Time = 65000, State Outputs: a_we_o = 0, a_rst_o = 1, b_we_o = 0, b_rst_o = 1, fct_we_o = 0, fct_rst_o = 1, s_we_o = 1, s_rst_o = 1, signal_we_o = 1, signal_rst_o = 1
-# Time = 75000, State Outputs: a_we_o = 0, a_rst_o = 1, b_we_o = 0, b_rst_o = 1, fct_we_o = 0, fct_rst_o = 1, s_we_o = 0, s_rst_o = 1, signal_we_o = 0, signal_rst_o = 1
-# Time = 85000, State Outputs: a_we_o = 0, a_rst_o = 0, b_we_o = 0, b_rst_o = 0, fct_we_o = 0, fct_rst_o = 0, s_we_o = 0, s_rst_o = 0, signal_we_o = 0, signal_rst_o = 0
-# ** Note: $finish    : ./SRC/BENCH/fsm_tb.v(49)
-#    Time: 100 ns  Iteration: 0  Instance: /fsm_tb
+# At                    0, a_i = xx, b_i = xx, fct_i = xx, s_o = 0000, signal_o = 0
+# At                10000, a_i = aa, b_i = 55, fct_i = 00, s_o = 0000, signal_o = 0
+# At                45000, a_i = aa, b_i = 55, fct_i = 00, s_o = 00ff, signal_o = 0
+# At               110000, a_i = aa, b_i = 55, fct_i = 00, s_o = 0000, signal_o = 0
+# At               120000, a_i = aa, b_i = 55, fct_i = 01, s_o = 0000, signal_o = 0
+# At               155000, a_i = aa, b_i = 55, fct_i = 01, s_o = 0055, signal_o = 0
+# At               220000, a_i = aa, b_i = 55, fct_i = 01, s_o = 0000, signal_o = 0
+# At               230000, a_i = 05, b_i = c8, fct_i = 10, s_o = 0000, signal_o = 0
+# At               265000, a_i = 05, b_i = c8, fct_i = 10, s_o = 03e8, signal_o = 0
+# At               330000, a_i = 05, b_i = c8, fct_i = 10, s_o = 0000, signal_o = 0
+# At               340000, a_i = 00, b_i = 00, fct_i = 11, s_o = 0000, signal_o = 0
+# At               375000, a_i = 00, b_i = 00, fct_i = 11, s_o = 0000, signal_o = 1
+# ** Note: $finish    : ./SRC/BENCH/top_level_tb.v(78)
+#    Time: 440 ns  Iteration: 0  Instance: /top_level_tb
 # 1
-# Break in Module fsm_tb at ./SRC/BENCH/fsm_tb.v line 49
+# Break in Module top_level_tb at ./SRC/BENCH/top_level_tb.v line 78
 # couldn't load file "/home/mario/intelFPGA/20.1/modelsim_ase/linux/ScintillaTk/libScintillaTk1.14.so": libstdc++.so.6: cannot open shared object file: No such file or directory
 # list element in quotes followed by ":" instead of space
+# End time: 11:35:58 on Apr 23,2024, Elapsed time: 0:00:48
+# Errors: 0, Warnings: 2

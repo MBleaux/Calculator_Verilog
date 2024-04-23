@@ -8,7 +8,7 @@ reg [1:0] fct;
 wire [2*WIDTH-1:0] result;
 wire equal;
 
-// Instanciar o módulo ALU
+// Instantiate the ALU module
 alu #(.width(WIDTH)) dut (
     .a_i(a), 
     .b_i(b),
@@ -17,37 +17,37 @@ alu #(.width(WIDTH)) dut (
     .signal_o(equal)
 );
 
-// Procedimento de teste
+// Test procedure
 initial begin
-    // Teste de adição
+    // Addition test
     a = 8'b00001111;  // 15
     b = 8'b00000101;  // 5
-    fct = 2'b00;      // Função de adição
+    fct = 2'b00;      // Addition function
     #10;
     $display("Addition Test: a = %b, b = %b, result = %b", a, b, result);
 
-    // Teste de subtração
+    // Subtraction test
     a = 8'b00001111;  // 15
     b = 8'b00000101;  // 5
-    fct = 2'b01;      // Função de subtração
+    fct = 2'b01;      // Subtraction function
     #10;
     $display("Subtraction Test: a = %b, b = %b, result = %b", a, b, result);
 
-    // Teste de multiplicação
+    // Multiplication test
     a = 8'b00000011;  // 3
     b = 8'b00000010;  // 2
-    fct = 2'b10;      // Função de multiplicação
+    fct = 2'b10;      // Multiplication function
     #10;
     $display("Multiplication Test: a = %b, b = %b, result = %b", a, b, result);
 
-    // Teste de comparação
+    // Comparison test
     a = 8'b00001111;  // 15
     b = 8'b00001111;  // 15
-    fct = 2'b11;      // Função de comparação
+    fct = 2'b11;      // Comparison function
     #10;
     $display("Comparison Test: a = %b, b = %b, equal = %b", a, b, equal);
 
-    // Terminar simulação
+    // End simulation
     $finish;
 end
 

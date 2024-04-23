@@ -10,7 +10,7 @@ reg clock_s, reset_s, we_s;
 wire [width-1:0] q_s;
 
 // DUT : component instanciation
-dff_nbits #(.width(width)) dut (.d_i(d_s), .clock_i(clock_s), .reset_i(reset_s), .we_s(we_s), .q_o(q_s));
+dff_nbits #(.width(width)) dut (.d_i(d_s), .clock_i(clock_s), .reset_i(reset_s), .we_i(we_s), .q_o(q_s));
 
 // Clock generation
 initial begin

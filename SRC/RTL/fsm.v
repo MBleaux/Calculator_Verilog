@@ -1,3 +1,14 @@
+/**
+ * @file or_gate
+ * @author Mario Araujo (gmarioaraujo@gmail.com)
+ * @brief Finite State Machine - FSM
+  *        IDLE -> READING -> RUNNING -> WRITING -> DONE -> IDLE
+ * @version 0.1
+ * @date 2024-04-22
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 `timescale 1ns / 1ps
 
 module fsm(
@@ -9,54 +20,54 @@ module fsm(
                     signal_we_o, signal_rst_o
 );
 
-// Definindo os estados usando typedef e enum
+// Defining states using typedef and enum
 typedef enum {IDLE, READING, RUNNING, WRITING, DONE} state_t;
 
-// Variáveis de estado
+// State variables
 state_t current_state, next_state;
 
-// Bloco always_ff para lógica de transição de estado
+// Always_ff block for state transition logic
 always_ff @(posedge clock_i or negedge reset_i) begin
     if (!reset_i) begin
-        current_state <= IDLE; // Reset para o estado IDLE
+        current_state <= IDLE; // Reset to IDLE state
     end else begin
-        current_state <= next_state; // Transição para o próximo estado
+        current_state <= next_state; // Transition to the next state
     end
 end
 
-// Bloco always_comb para determinar o próximo estado
+// Always_comb block to determine the next state
 always_comb begin
     case (current_state)
         IDLE: begin
             if (start_i) begin
-                next_state = READING; // Transição para READIING se start_i for alto
+                next_state = READING; // Transition to READIING if start_i is high
             end else begin
-                next_state = IDLE; // Permanece em IDLE
+                next_state = IDLE; // Remains in IDLE
             end
         end
         READING: begin
-            next_state = RUNNING; // Transição para RUNNING após um ciclo (simplicidade)
+            next_state = RUNNING; // Transition to RUNNING after one cycle
         end
         RUNNING: begin
-            next_state = WRITING; // Transição para WRITING após um ciclo (simplicidade)
+            next_state = WRITING; // Transition to WRITING after one cycle
         end
         WRITING: begin
-            next_state = DONE; // Transição para DONE após um ciclo (simplicidade)
+            next_state = DONE; // Transition to DONE after one cycle
         end
         DONE: begin
             if (!reset_i) begin
-                next_state = IDLE; // Retorna para IDLE se reset_i for baixo
+                next_state = IDLE; // Returns to IDLE if reset_i is low
             end else begin
-                next_state = DONE; // Permanece em DONE
+                next_state = DONE; // Remains in DONE
             end
         end
         default: begin
-            next_state = IDLE; // Estado de segurança padrão
+            next_state = IDLE; // Default security state
         end
     endcase
 end
 
-// Bloco always_comb para atualizações de saída
+// Always_comb block for output updates
 always_comb begin
     case (current_state)
         IDLE: begin
