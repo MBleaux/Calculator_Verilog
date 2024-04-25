@@ -3,11 +3,11 @@
 This document outlines the project to create a simple 8-bit calculator using Verilog. The calculator is capable of performing the following operations:
 
 - Addition of two values: \(a + b\)
-  ![Addition Operation](images/halfadder.svg)
-  ![Addition Operation](images/fulladder.svg)
+  ![Addition Operation](image/halfadder.svg)
+  ![Addition Operation](image/fulladder.svg)
 - Subtraction of two values: \(a - b\)
-  ![Subtraction Operation](images/fullsub.svg)
+  ![Subtraction Operation](image/fullsub.svg)
 - Multiplication of two values: \(a * b\)
-  ![Multiplication Operation](images/multiplication.svg)
+  ![Multiplication Operation](image/multiplication.svg)
 - Comparison of two values to check equality: \(a = b\)
-  ![Comparison Operation](images/comparison.svg)
+  ![Comparison Operation](image/comparison.svg)
