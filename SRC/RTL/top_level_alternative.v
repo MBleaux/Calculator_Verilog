@@ -1,8 +1,8 @@
 /**
  * @file or_gate
  * @author Mario Araujo (gmarioaraujo@gmail.com)
- * @brief Top Level
- * @version 0.1
+ * @brief Top Level Alternative: using the alternative ALU
+ * @version 0.2
  * @date 2024-04-22
  * 
  * @copyright Copyright (c) 2024
@@ -10,7 +10,7 @@
  */
 `timescale 1ns / 1ps
 
-module top_level #(parameter width = 8)(
+module top_level_alternative #(parameter width = 8)(
     input logic clock_i,
     input logic reset_i,
     input logic start_i,
@@ -50,7 +50,7 @@ module top_level #(parameter width = 8)(
     );
 
     // Instantiate the ALU module
-    alu #(.width(width)) dut (
+    alu_alternative #(.width(width)) dut (
         .a_i(a_i_s), 
         .b_i(b_i_s),
         .fct_i(fct_i_s),
