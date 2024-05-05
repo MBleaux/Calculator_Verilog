@@ -2,14 +2,14 @@
 #include <iostream>
 #include <verilated.h>
 #include <verilated_vcd_c.h>
-#include "obj_dir/Vtop_level_alternative.h"
+#include "obj_dir/Vtop_level.h"
 
 int main(int argc, char** argv) {
     // Initialize Verilator
     Verilated::commandArgs(argc, argv);
 
     // Create an instance of the Verilated module
-    Vtop_level_alternative* dut = new Vtop_level_alternative;
+    Vtop_level* dut = new Vtop_level;
 
     // Initialize VCD trace
     Verilated::traceEverOn(true);
@@ -27,9 +27,9 @@ int main(int argc, char** argv) {
     dut->clock_i = 0;
     dut->reset_i = 0;
     dut->start_i = 0;
-    dut->a_i     = 0x1; //std::rand() % 256;
+    dut->a_i     = 0xf; //std::rand() % 256;
     dut->b_i     = 0x2; //std::rand() % 256;
-    dut->fct_i   = 1;
+    dut->fct_i   = 3;
 
     // Dump trace
     m_trace->dump(time);
@@ -55,8 +55,9 @@ int main(int argc, char** argv) {
                   << " a_i: " << (int)dut->a_i
                   << " b_i: " << (int)dut->b_i
                   << " fct_i: " << (int)dut->fct_i
-                  << " s_o: " << (int)dut->s_o
-                  << " signal_o: " << (int)dut->signal_o << std::endl;
+                  << " res_o: " << (int)dut->res_o
+                  << " rem_o: " << (int)dut->rem_o
+                  << " signal_o: " << (int)dut->done_o << std::endl;
 
         // Advance time
         dut->eval();

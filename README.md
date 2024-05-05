@@ -4,22 +4,13 @@ This document outlines the project to create a simple 8-bit calculator using Ver
 
 - Addition of two values: \(a + b\)
 
-  ![Half Addition Operation](image/halfadder.svg)
-  ![Addition Operation](image/fulladder.svg)
-  ![Addition Operation nbits](image/fulladdernbits.svg)
-
 - Subtraction of two values: \(a - b\)
-  ![Subtraction Operation](image/fullsub.svg)
-  ![Subtraction Operation nbits](image/fullsubnbits.svg)
 
 - Multiplication of two values: \(a * b\)
-  ![Multiplication Operation](image/multiplication.svg)
 
-- Comparison of two values to check equality: \(a = b\)
-  ![Comparison Operation](image/comparaison.svg)
+- Euclid's Division of two values: \(a / b\)
 
 ## Finite State Machine
-![Top Level](image/top_level.svg)
 
 FSM consists in five states:
 1. IDLE: the system waits for the command start_i high, otherwise the state continues being IDLE

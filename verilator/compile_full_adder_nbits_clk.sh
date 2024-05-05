@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BASE_PATH="./../SRC/RTL"
+BASE_PATH="./../SRC/RTL/others"
 
 echo -e "\e[32m---------------------------------------\e[0m"
 echo -e "\e[32mExecuting commands...\e[0m"

@@ -8,8 +8,8 @@ reg reset_i;
 reg start_i;
 reg [WIDTH-1:0] a_i, b_i;
 reg [1:0] fct_i;
-wire [2*WIDTH-1:0] res_o, rem_o;
-wire done_o;
+wire [2*WIDTH-1:0] s_o;
+wire signal_o;
 
 // Instance of the top_level module
 top_level #(.width(WIDTH)) dut (
@@ -19,9 +19,8 @@ top_level #(.width(WIDTH)) dut (
     .a_i(a_i),
     .b_i(b_i),
     .fct_i(fct_i),
-    .res_o(res_o),
-    .rem_o(rem_o),
-    .done_o(done_o)
+    .s_o(s_o),
+    .signal_o(signal_o)
 );
 
 // Clock generation
@@ -69,9 +68,9 @@ initial begin
     reset_i = 0;
     start_i = 0;
     #10 reset_i = 1;
-    // Test Division
-    a_i = 8'd15;
-    b_i = 8'd2;
+    // Test Comparison
+    a_i = 0;
+    b_i = 0;
     fct_i = 2'b11;
     start_i = 1;
     #100; // Observe changes in output signals
@@ -81,7 +80,7 @@ end
 
 // Monitoring
 initial begin
-    $monitor("At %t, a_i = %h, b_i = %h, fct_i = %b, res_o = %h, rem_o = %h, done_o = %b", $time, a_i, b_i, fct_i, res_o, rem_o, done_o);
+    $monitor("At %t, a_i = %h, b_i = %h, fct_i = %b, s_o = %h, signal_o = %b", $time, a_i, b_i, fct_i, s_o, signal_o);
 end
 
 endmodule

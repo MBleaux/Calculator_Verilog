@@ -1,10 +1,10 @@
 /**
- * @file fsm
+ * @file or_gate
  * @author Mario Araujo (gmarioaraujo@gmail.com)
  * @brief Finite State Machine - FSM
   *        IDLE -> READING -> RUNNING -> WRITING -> DONE -> IDLE
- * @version 0.2
- * @date 2024-05-05
+ * @version 0.1
+ * @date 2024-04-22
  * 
  * @copyright Copyright (c) 2024
  * 
@@ -16,9 +16,8 @@ module fsm(
     output logic    a_we_o, a_rst_o,
                     b_we_o, b_rst_o,
                     fct_we_o, fct_rst_o,
-                    res_we_o, res_rst_o,
-                    rem_we_o, rem_rst_o,
-                    done_we_o, done_rst_o
+                    s_we_o, s_rst_o,
+                    signal_we_o, signal_rst_o
 );
 
 // Defining states using typedef and enum
@@ -81,14 +80,11 @@ always_comb begin
             fct_we_o  = 0;
             fct_rst_o = 0;
 
-            res_we_o  = 0;
-            res_rst_o = 0;
+            s_we_o  = 0;
+            s_rst_o = 0;
 
-            rem_we_o  = 0;
-            rem_rst_o = 0;
-
-            done_we_o  = 0;
-            done_rst_o = 0;
+            signal_we_o  = 0;
+            signal_rst_o = 0;
         end
         READING: begin
             a_we_o  = 1;
@@ -100,14 +96,11 @@ always_comb begin
             fct_we_o  = 1;
             fct_rst_o = 1;
 
-            res_we_o  = 0;
-            res_rst_o = 0;
+            s_we_o  = 0;
+            s_rst_o = 0;
 
-            rem_we_o  = 0;
-            rem_rst_o = 0;
-
-            done_we_o  = 0;
-            done_rst_o = 0;
+            signal_we_o  = 0;
+            signal_rst_o = 0;
         end
         RUNNING: begin
             a_we_o  = 0;
@@ -119,14 +112,11 @@ always_comb begin
             fct_we_o  = 0;
             fct_rst_o = 1;
 
-            res_we_o  = 0;
-            res_rst_o = 0;
+            s_we_o  = 0;
+            s_rst_o = 0;
 
-            rem_we_o  = 0;
-            rem_rst_o = 0;
-
-            done_we_o  = 0;
-            done_rst_o = 0;
+            signal_we_o  = 0;
+            signal_rst_o = 0;
         end
         WRITING: begin
             a_we_o  = 0;
@@ -138,14 +128,11 @@ always_comb begin
             fct_we_o  = 0;
             fct_rst_o = 1;
 
-            res_we_o  = 1;
-            res_rst_o = 1;
+            s_we_o  = 1;
+            s_rst_o = 1;
 
-            rem_we_o  = 1;
-            rem_rst_o = 1;
-
-            done_we_o  = 1;
-            done_rst_o = 1;
+            signal_we_o  = 1;
+            signal_rst_o = 1;
         end
         DONE: begin
             a_we_o  = 0;
@@ -157,14 +144,11 @@ always_comb begin
             fct_we_o  = 0;
             fct_rst_o = 1;
 
-            res_we_o  = 0;
-            res_rst_o = 1;
+            s_we_o  = 0;
+            s_rst_o = 1;
 
-            rem_we_o  = 0;
-            rem_rst_o = 1;
-
-            done_we_o  = 0;
-            done_rst_o = 1;
+            signal_we_o  = 0;
+            signal_rst_o = 1;
         end
     endcase
 end

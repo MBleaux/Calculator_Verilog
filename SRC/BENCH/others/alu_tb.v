@@ -5,17 +5,16 @@ module alu_tb;
 parameter WIDTH = 8;
 reg [WIDTH-1:0] a, b;
 reg [1:0] fct;
-wire [2*WIDTH-1:0] result, rem;
-wire done;
+wire [2*WIDTH-1:0] result;
+wire equal;
 
 // Instantiate the ALU module
 alu #(.width(WIDTH)) dut (
     .a_i(a), 
     .b_i(b),
     .fct_i(fct),
-    .res_o(result),
-    .rem_o(rem),
-    .done_o(done)
+    .s_o(result),
+    .signal_o(equal)
 );
 
 // Test procedure
@@ -41,12 +40,12 @@ initial begin
     #10;
     $display("Multiplication Test: a = %b, b = %b, result = %b", a, b, result);
 
-    // Divison test
+    // Comparison test
     a = 8'b00001111;  // 15
-    b = 8'b00000010;  // 2
-    fct = 2'b11;      // Division function
+    b = 8'b00001111;  // 15
+    fct = 2'b11;      // Comparison function
     #10;
-    $display("Comparison Test: a = %b, b = %b, result = %b, rem = %b", a, b, result, rem);
+    $display("Comparison Test: a = %b, b = %b, equal = %b", a, b, equal);
 
     // End simulation
     $finish;

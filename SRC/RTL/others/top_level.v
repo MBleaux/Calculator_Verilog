@@ -1,9 +1,9 @@
 /**
- * @file top_level
+ * @file or_gate
  * @author Mario Araujo (gmarioaraujo@gmail.com)
- * @brief Top Level: instantiating the registers, FSM and ALU
- * @version 0.3
- * @date 2024-05-05
+ * @brief Top Level
+ * @version 0.1
+ * @date 2024-04-22
  * 
  * @copyright Copyright (c) 2024
  * 
@@ -16,17 +16,17 @@ module top_level #(parameter width = 8)(
     input logic start_i,
     input logic [width-1:0] a_i, b_i,
     input logic [1:0] fct_i,
-    output logic [2*width-1:0] res_o, rem_o,
-    output logic done_o
+    output logic [2*width-1:0] s_o,
+    output logic signal_o
 );
     // Internal control and status signals
-    logic a_we_s, a_rst_s, b_we_s, b_rst_s, fct_we_s, fct_rst_s, res_we_s, res_rst_s, rem_we_s, rem_rst_s, done_we_s, done_rst_s;
+    logic a_we_s, a_rst_s, b_we_s, b_rst_s, fct_we_s, fct_rst_s, s_we_s, s_rst_s, signal_we_s, signal_rst_s;
 
     // Output signals from the registers
     logic [width-1:0] a_i_s, b_i_s;
-    logic [2*width-1:0] res_s, rem_s;
+    logic [2*width-1:0] s_s;
     logic [1:0] fct_i_s;
-    logic done_o_s;
+    logic signal_o_s;
 
     // REG_A_i : component instanciation
     dff_nbits #(.width(width)) reg_a (.d_i(a_i), .clock_i(clock_i), .reset_i(a_rst_s), .we_i(a_we_s), .q_o(a_i_s));
@@ -37,7 +37,7 @@ module top_level #(parameter width = 8)(
     // REG_fct_i : component instanciation
     dff_nbits #(.width(2)) reg_fct (.d_i(fct_i), .clock_i(clock_i), .reset_i(fct_rst_s), .we_i(fct_we_s), .q_o(fct_i_s));
 
-    // Instantiate the FSM module
+    // Módulo FSM - controla a lógica de operação
     fsm fsm_unit (
         .clock_i(clock_i),
         .reset_i(reset_i),
@@ -45,28 +45,23 @@ module top_level #(parameter width = 8)(
         .a_we_o(a_we_s), .a_rst_o(a_rst_s),
         .b_we_o(b_we_s), .b_rst_o(b_rst_s),
         .fct_we_o(fct_we_s), .fct_rst_o(fct_rst_s),
-        .res_we_o(res_we_s), .res_rst_o(res_rst_s),
-        .rem_we_o(rem_we_s), .rem_rst_o(rem_rst_s),
-        .done_we_o(done_we_s), .done_rst_o(done_rst_s)
+        .s_we_o(s_we_s), .s_rst_o(s_rst_s),
+        .signal_we_o(signal_we_s), .signal_rst_o(signal_rst_s)
     );
 
     // Instantiate the ALU module
-    alu #(.width(width)) alu_unit (
+    alu #(.width(width)) dut (
         .a_i(a_i_s), 
         .b_i(b_i_s),
         .fct_i(fct_i_s),
-        .res_o(res_s),
-        .rem_o(rem_s),
-        .done_o(done_o_s)
+        .s_o(s_s),
+        .signal_o(signal_o_s)
     );
 
-    // REG_res_o : component instanciation
-    dff_nbits #(.width(2*width)) reg_res (.d_i(res_s), .clock_i(clock_i), .reset_i(res_rst_s), .we_i(res_we_s), .q_o(res_o));
+    // REG_s_o : component instanciation
+    dff_nbits #(.width(2*width)) reg_s (.d_i(s_s), .clock_i(clock_i), .reset_i(s_rst_s), .we_i(s_we_s), .q_o(s_o));
 
-    // REG_rem_o : component instanciation
-    dff_nbits #(.width(2*width)) reg_rem (.d_i(rem_s), .clock_i(clock_i), .reset_i(rem_rst_s), .we_i(rem_we_s), .q_o(rem_o));
-
-    // REG_done_o : component instanciation
-    dff_nbits #(.width(1)) reg_done (.d_i(done_o_s), .clock_i(clock_i), .reset_i(done_rst_s), .we_i(done_we_s), .q_o(done_o));
+    // REG_signal_o : component instanciation
+    dff_nbits #(.width(1)) reg_signal (.d_i(signal_o_s), .clock_i(clock_i), .reset_i(signal_rst_s), .we_i(signal_we_s), .q_o(signal_o));
 
 endmodule
