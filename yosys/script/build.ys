@@ -1,0 +1,15 @@
+read_rtlil ./out/wrapper_gen.il
+flatten
+
+select t:*ff* %co t:*ff* %d s:2 %i
+fault_rtlil -effect set -cnt 1 -timing 3
+cd; opt
+
+async2sync
+dffunmap
+
+sim -zinit -clock clock_i -resetn reset_i -n 10 -rstlen 1 -w -vcd ./out/build.vcd
+write_verilog ./out/wrapper_gen_fault.v
+write_rtlil ./out/wrapper_gen_fault.il
+write_btor ./out/wrapper_gen_fault.btor2
+write_smt2 ./out/wrapper_gen_fault.smt2

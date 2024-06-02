@@ -19,6 +19,6 @@ FSM consists in five states:
 4. WRITING: after calculting, the results are writing in the registers
 5. DONE: in this state, the value is in the output
 
-Thus, the time needed to calculate the operation is 4 clock periods.
+Thus, the time needed to calculate the operation is 3 clock periods.
 
 To reset all values, put the reset_i in low level.

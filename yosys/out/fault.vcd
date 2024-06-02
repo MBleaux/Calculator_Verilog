@@ -1,0 +1,503 @@
+$version Yosys $end
+$scope module wrapper $end
+$var wire 1 n98 start_s $end
+$var wire 1 n97 reset_i $end
+$var wire 16 n96 res_o $end
+$var wire 16 n95 rem_o $end
+$var wire 8 n94 global_fault_cnt $end
+$var reg 32 n93 global_fault_clock $end
+$var wire 2 n92 fct_s $end
+$var wire 8 n91 fault_cnt_incr $end
+$var wire 1 n90 dut.start_i $end
+$var wire 1 n89 dut.reset_i $end
+$var wire 1 n88 dut.res_we_s $end
+$var wire 16 n87 dut.res_s $end
+$var wire 1 n86 dut.res_rst_s $end
+$var wire 16 n85 dut.res_o $end
+$var wire 1 n84 dut.rem_we_s $end
+$var wire 16 n83 dut.rem_s $end
+$var wire 1 n82 dut.rem_rst_s $end
+$var wire 16 n81 dut.rem_o $end
+$var wire 1 n80 dut.reg_res.we_i $end
+$var wire 1 n79 dut.reg_res.reset_i $end
+$var wire 16 n78 dut.reg_res.q_o $end
+$var wire 16 n77 dut.reg_res.d_i $end
+$var wire 1 n76 dut.reg_res.clock_i $end
+$var wire 1 n75 dut.reg_rem.we_i $end
+$var wire 1 n74 dut.reg_rem.reset_i $end
+$var wire 16 n73 dut.reg_rem.q_o $end
+$var wire 16 n72 dut.reg_rem.d_i $end
+$var wire 1 n71 dut.reg_rem.clock_i $end
+$var wire 1 n70 dut.reg_fct.we_i $end
+$var wire 1 n69 dut.reg_fct.reset_i $end
+$var wire 1 n68 dut.reg_fct.q_o_fault_sel $end
+$var wire 2 n67 dut.reg_fct.q_o_fault $end
+$var wire 2 n66 dut.reg_fct.q_o $end
+$var wire 2 n65 dut.reg_fct.d_i $end
+$var wire 1 n64 dut.reg_fct.clock_i $end
+$var wire 1 n63 dut.reg_done.we_i $end
+$var wire 1 n62 dut.reg_done.reset_i $end
+$var wire 1 n61 dut.reg_done.q_o $end
+$var wire 1 n60 dut.reg_done.d_i $end
+$var wire 1 n59 dut.reg_done.clock_i $end
+$var wire 1 n58 dut.reg_b.we_i $end
+$var wire 1 n57 dut.reg_b.reset_i $end
+$var wire 8 n56 dut.reg_b.q_o $end
+$var wire 8 n55 dut.reg_b.d_i $end
+$var wire 1 n54 dut.reg_b.clock_i $end
+$var wire 1 n53 dut.reg_a.we_i $end
+$var wire 1 n52 dut.reg_a.reset_i $end
+$var wire 8 n51 dut.reg_a.q_o $end
+$var wire 8 n50 dut.reg_a.d_i $end
+$var wire 1 n49 dut.reg_a.clock_i $end
+$var wire 1 n48 dut.fsm_unit.start_i $end
+$var wire 1 n47 dut.fsm_unit.reset_i $end
+$var wire 1 n46 dut.fsm_unit.res_we_o $end
+$var wire 1 n45 dut.fsm_unit.res_rst_o $end
+$var wire 1 n44 dut.fsm_unit.rem_we_o $end
+$var wire 1 n43 dut.fsm_unit.rem_rst_o $end
+$var wire 3 n42 dut.fsm_unit.next_state $end
+$var wire 1 n41 dut.fsm_unit.fct_we_o $end
+$var wire 1 n40 dut.fsm_unit.fct_rst_o $end
+$var wire 1 n39 dut.fsm_unit.done_we_o $end
+$var wire 1 n38 dut.fsm_unit.done_rst_o $end
+$var wire 32 n37 dut.fsm_unit.current_state $end
+$var wire 1 n36 dut.fsm_unit.clock_i $end
+$var wire 1 n35 dut.fsm_unit.b_we_o $end
+$var wire 1 n34 dut.fsm_unit.b_rst_o $end
+$var wire 1 n33 dut.fsm_unit.a_we_o $end
+$var wire 1 n32 dut.fsm_unit.a_rst_o $end
+$var wire 1 n31 dut.fsm_unit._sv2v_0 $end
+$var wire 1 n30 dut.fct_we_s $end
+$var wire 1 n29 dut.fct_rst_s $end
+$var wire 2 n28 dut.fct_i_s $end
+$var wire 2 n27 dut.fct_i $end
+$var wire 1 n26 dut.done_we_s $end
+$var wire 1 n25 dut.done_rst_s $end
+$var wire 1 n24 dut.done_o_s $end
+$var wire 1 n23 dut.done_o $end
+$var wire 1 n22 dut.clock_i $end
+$var wire 1 n21 dut.b_we_s $end
+$var wire 1 n20 dut.b_rst_s $end
+$var wire 8 n19 dut.b_i_s $end
+$var wire 8 n18 dut.b_i $end
+$var wire 16 n17 dut.alu_unit.res_o $end
+$var wire 16 n16 dut.alu_unit.rem_o $end
+$var wire 2 n15 dut.alu_unit.fct_i $end
+$var wire 1 n14 dut.alu_unit.done_o $end
+$var wire 8 n13 dut.alu_unit.b_i $end
+$var wire 16 n12 dut.alu_unit.b_extended $end
+$var wire 8 n11 dut.alu_unit.a_i $end
+$var wire 16 n10 dut.alu_unit.a_extended $end
+$var wire 1 n9 dut.alu_unit._sv2v_0 $end
+$var wire 1 n8 dut.a_we_s $end
+$var wire 1 n7 dut.a_rst_s $end
+$var wire 8 n6 dut.a_i_s $end
+$var wire 8 n5 dut.a_i $end
+$var wire 1 n4 done_o $end
+$var wire 1 n3 clock_i $end
+$var wire 8 n2 b_s $end
+$var wire 8 n1 a_s $end
+$upscope $end
+$enddefinitions $end
+#0
+b00000011 n1
+b00000111 n2
+bx n3
+b0 n4
+b00000011 n5
+b00000000 n6
+b0 n7
+b0 n8
+b0 n9
+b0000000000000000 n10
+b00000000 n11
+b0000000000000000 n12
+b00000000 n13
+bx n14
+bxx n15
+bxxxxxxxxxxxxxxxx n16
+bxxxxxxxxxxxxxxxx n17
+b00000111 n18
+b00000000 n19
+b0 n20
+b0 n21
+bx n22
+b0 n23
+bx n24
+b0 n25
+b0 n26
+b10 n27
+bxx n28
+b0 n29
+b0 n30
+b0 n31
+b0 n32
+b0 n33
+b0 n34
+b0 n35
+bx n36
+b00000000000000000000000000000000 n37
+b0 n38
+b0 n39
+b0 n40
+b0 n41
+b001 n42
+b0 n43
+b0 n44
+b0 n45
+b0 n46
+b0 n47
+b1 n48
+bx n49
+b00000011 n50
+b00000000 n51
+b0 n52
+b0 n53
+bx n54
+b00000111 n55
+b00000000 n56
+b0 n57
+b0 n58
+bx n59
+bx n60
+b0 n61
+b0 n62
+b0 n63
+bx n64
+b10 n65
+bxx n66
+bxx n67
+bx n68
+b0 n69
+b0 n70
+bx n71
+bxxxxxxxxxxxxxxxx n72
+b0000000000000000 n73
+b0 n74
+b0 n75
+bx n76
+bxxxxxxxxxxxxxxxx n77
+b0000000000000000 n78
+b0 n79
+b0 n80
+b0000000000000000 n81
+b0 n82
+bxxxxxxxxxxxxxxxx n83
+b0 n84
+b0000000000000000 n85
+b0 n86
+bxxxxxxxxxxxxxxxx n87
+b0 n88
+b0 n89
+b1 n90
+b0000000x n91
+b10 n92
+b00000000000000000000000000000000 n93
+bxxxxxxxx n94
+b0000000000000000 n95
+b0000000000000000 n96
+b0 n97
+b1 n98
+#5
+b0 n3
+b0 n22
+b0 n36
+b0 n49
+b0 n54
+b0 n59
+b0 n64
+b0 n71
+b0 n76
+b00000000000000000000000000000001 n93
+#10
+b1 n3
+b1 n22
+b1 n36
+b1 n47
+b1 n49
+b1 n54
+b1 n59
+b1 n64
+b1 n71
+b1 n76
+b1 n89
+b00000000000000000000000000000010 n93
+b1 n97
+#15
+b0 n3
+b0 n22
+b0 n36
+b0 n49
+b0 n54
+b0 n59
+b0 n64
+b0 n71
+b0 n76
+b00000000000000000000000000000011 n93
+#20
+b1 n3
+b1 n7
+b1 n8
+b1 n20
+b1 n21
+b1 n22
+b1 n29
+b1 n30
+b1 n32
+b1 n33
+b1 n34
+b1 n35
+b1 n36
+b00000000000000000000000000000001 n37
+b1 n40
+b1 n41
+b010 n42
+b1 n49
+b1 n52
+b1 n53
+b1 n54
+b1 n57
+b1 n58
+b1 n59
+b1 n64
+b1 n69
+b1 n70
+b1 n71
+b1 n76
+b00000000000000000000000000000100 n93
+#25
+b0 n3
+b0 n22
+b0 n36
+b0 n49
+b0 n54
+b0 n59
+b0 n64
+b0 n71
+b0 n76
+b00000000000000000000000000000101 n93
+#30
+b1 n3
+b00000011 n6
+b0 n8
+b0000000000000011 n10
+b00000011 n11
+b0000000000000111 n12
+b00000111 n13
+b00000111 n19
+b0 n21
+b1 n22
+b0 n30
+b0 n33
+b0 n35
+b1 n36
+b00000000000000000000000000000010 n37
+b0 n41
+b011 n42
+b1 n49
+b00000011 n51
+b0 n53
+b1 n54
+b00000111 n56
+b0 n58
+b1 n59
+b1 n64
+b0 n70
+b1 n71
+b1 n76
+b00000000000000000000000000000110 n93
+#35
+b0 n3
+b0 n22
+b0 n36
+b0 n49
+b0 n54
+b0 n59
+b0 n64
+b0 n71
+b0 n76
+b00000000000000000000000000000111 n93
+#40
+b1 n3
+b1 n22
+b1 n25
+b1 n26
+b1 n36
+b00000000000000000000000000000011 n37
+b1 n38
+b1 n39
+b100 n42
+b1 n43
+b1 n44
+b1 n45
+b1 n46
+b1 n49
+b1 n54
+b1 n59
+b1 n62
+b1 n63
+b1 n64
+b1 n71
+b1 n74
+b1 n75
+b1 n76
+b1 n79
+b1 n80
+b1 n82
+b1 n84
+b1 n86
+b1 n88
+b00000000000000000000000000001000 n93
+#45
+b0 n3
+b0 n22
+b0 n36
+b0 n49
+b0 n54
+b0 n59
+b0 n64
+b0 n71
+b0 n76
+b00000000000000000000000000001001 n93
+#50
+b1 n3
+bx n4
+b1 n22
+bx n23
+b0 n26
+b1 n36
+b00000000000000000000000000000100 n37
+b0 n39
+b0 n44
+b0 n46
+b1 n49
+b1 n54
+b1 n59
+bx n61
+b0 n63
+b1 n64
+b1 n71
+bxxxxxxxxxxxxxxxx n73
+b0 n75
+b1 n76
+bxxxxxxxxxxxxxxxx n78
+b0 n80
+bxxxxxxxxxxxxxxxx n81
+b0 n84
+bxxxxxxxxxxxxxxxx n85
+b0 n88
+b00000000000000000000000000001010 n93
+bxxxxxxxxxxxxxxxx n95
+bxxxxxxxxxxxxxxxx n96
+#55
+b0 n3
+b0 n22
+b0 n36
+b0 n49
+b0 n54
+b0 n59
+b0 n64
+b0 n71
+b0 n76
+b00000000000000000000000000001011 n93
+#60
+b1 n3
+b1 n22
+b1 n36
+b1 n49
+b1 n54
+b1 n59
+b1 n64
+b1 n71
+b1 n76
+b00000000000000000000000000001100 n93
+#65
+b0 n3
+b0 n22
+b0 n36
+b0 n49
+b0 n54
+b0 n59
+b0 n64
+b0 n71
+b0 n76
+b00000000000000000000000000001101 n93
+#70
+b1 n3
+b1 n22
+b1 n36
+b1 n49
+b1 n54
+b1 n59
+b1 n64
+b1 n71
+b1 n76
+b00000000000000000000000000001110 n93
+#75
+b0 n3
+b0 n22
+b0 n36
+b0 n49
+b0 n54
+b0 n59
+b0 n64
+b0 n71
+b0 n76
+b00000000000000000000000000001111 n93
+#80
+b1 n3
+b1 n22
+b1 n36
+b1 n49
+b1 n54
+b1 n59
+b1 n64
+b1 n71
+b1 n76
+b00000000000000000000000000010000 n93
+#85
+b0 n3
+b0 n22
+b0 n36
+b0 n49
+b0 n54
+b0 n59
+b0 n64
+b0 n71
+b0 n76
+b00000000000000000000000000010001 n93
+#90
+b1 n3
+b1 n22
+b1 n36
+b1 n49
+b1 n54
+b1 n59
+b1 n64
+b1 n71
+b1 n76
+b00000000000000000000000000010010 n93
+#95
+b0 n3
+b0 n22
+b0 n36
+b0 n49
+b0 n54
+b0 n59
+b0 n64
+b0 n71
+b0 n76
+b00000000000000000000000000010011 n93
+#100
+b1 n3
+b1 n22
+b1 n36
+b1 n49
+b1 n54
+b1 n59
+b1 n64
+b1 n71
+b1 n76
+b00000000000000000000000000010100 n93
+#102

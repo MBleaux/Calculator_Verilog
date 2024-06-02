@@ -1,0 +1,494 @@
+$version Yosys $end
+$scope module wrapper $end
+$var wire 1 n9 start_s $end
+$var wire 1 n8 reset_i $end
+$var wire 16 n7 res_o $end
+$var wire 16 n6 rem_o $end
+$var wire 2 n5 fct_s $end
+$var wire 1 n4 done_o $end
+$var wire 1 n3 clock_i $end
+$var wire 8 n2 b_s $end
+$var wire 8 n1 a_s $end
+$scope module dut $end
+$var wire 8 n36 a_i $end
+$var wire 8 n35 a_i_s $end
+$var wire 1 n34 a_rst_s $end
+$var wire 1 n33 a_we_s $end
+$var wire 8 n32 b_i $end
+$var wire 8 n31 b_i_s $end
+$var wire 1 n30 b_rst_s $end
+$var wire 1 n29 b_we_s $end
+$var wire 1 n28 clock_i $end
+$var wire 1 n27 done_o $end
+$var wire 1 n26 done_o_s $end
+$var wire 1 n25 done_rst_s $end
+$var wire 1 n24 done_we_s $end
+$var wire 2 n23 fct_i $end
+$var wire 2 n22 fct_i_s $end
+$var wire 1 n21 fct_rst_s $end
+$var wire 1 n20 fct_we_s $end
+$var wire 16 n19 rem_o $end
+$var wire 1 n18 rem_rst_s $end
+$var wire 16 n17 rem_s $end
+$var wire 1 n16 rem_we_s $end
+$var wire 16 n15 res_o $end
+$var wire 1 n14 res_rst_s $end
+$var wire 16 n13 res_s $end
+$var wire 1 n12 res_we_s $end
+$var wire 1 n11 reset_i $end
+$var wire 1 n10 start_i $end
+$scope module alu_unit $end
+$var wire 1 n45 _sv2v_0 $end
+$var wire 16 n44 a_extended $end
+$var wire 8 n43 a_i $end
+$var wire 16 n42 b_extended $end
+$var wire 8 n41 b_i $end
+$var wire 1 n40 done_o $end
+$var wire 2 n39 fct_i $end
+$var wire 16 n38 rem_o $end
+$var wire 16 n37 res_o $end
+$upscope $end
+$scope module fsm_unit $end
+$var wire 1 n63 _sv2v_0 $end
+$var reg 1 n62 a_rst_o $end
+$var reg 1 n61 a_we_o $end
+$var reg 1 n60 b_rst_o $end
+$var reg 1 n59 b_we_o $end
+$var wire 1 n58 clock_i $end
+$var reg 32 n57 current_state $end
+$var reg 1 n56 done_rst_o $end
+$var reg 1 n55 done_we_o $end
+$var reg 1 n54 fct_rst_o $end
+$var reg 1 n53 fct_we_o $end
+$var wire 3 n52 next_state $end
+$var reg 1 n51 rem_rst_o $end
+$var reg 1 n50 rem_we_o $end
+$var reg 1 n49 res_rst_o $end
+$var reg 1 n48 res_we_o $end
+$var wire 1 n47 reset_i $end
+$var wire 1 n46 start_i $end
+$upscope $end
+$scope module reg_a $end
+$var wire 1 n68 clock_i $end
+$var wire 8 n67 d_i $end
+$var reg 8 n66 q_o $end
+$var wire 1 n65 reset_i $end
+$var wire 1 n64 we_i $end
+$upscope $end
+$scope module reg_b $end
+$var wire 1 n73 clock_i $end
+$var wire 8 n72 d_i $end
+$var reg 8 n71 q_o $end
+$var wire 1 n70 reset_i $end
+$var wire 1 n69 we_i $end
+$upscope $end
+$scope module reg_done $end
+$var wire 1 n78 clock_i $end
+$var wire 1 n77 d_i $end
+$var reg 1 n76 q_o $end
+$var wire 1 n75 reset_i $end
+$var wire 1 n74 we_i $end
+$upscope $end
+$scope module reg_fct $end
+$var wire 1 n83 clock_i $end
+$var wire 2 n82 d_i $end
+$var reg 2 n81 q_o $end
+$var wire 1 n80 reset_i $end
+$var wire 1 n79 we_i $end
+$upscope $end
+$scope module reg_rem $end
+$var wire 1 n88 clock_i $end
+$var wire 16 n87 d_i $end
+$var reg 16 n86 q_o $end
+$var wire 1 n85 reset_i $end
+$var wire 1 n84 we_i $end
+$upscope $end
+$scope module reg_res $end
+$var wire 1 n93 clock_i $end
+$var wire 16 n92 d_i $end
+$var reg 16 n91 q_o $end
+$var wire 1 n90 reset_i $end
+$var wire 1 n89 we_i $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+b00000011 n1
+b00000111 n2
+bx n3
+b0 n4
+b10 n5
+b0000000000000000 n6
+b0000000000000000 n7
+b0 n8
+b1 n9
+b1 n10
+b0 n11
+b0 n12
+b0000000000000000 n13
+b0 n14
+b0000000000000000 n15
+b0 n16
+b0000000000000000 n17
+b0 n18
+b0000000000000000 n19
+b0 n20
+b0 n21
+b00 n22
+b10 n23
+b0 n24
+b0 n25
+b1 n26
+b0 n27
+bx n28
+b0 n29
+b0 n30
+b00000000 n31
+b00000111 n32
+b0 n33
+b0 n34
+b00000000 n35
+b00000011 n36
+b0000000000000000 n37
+b0000000000000000 n38
+b00 n39
+b1 n40
+b00000000 n41
+b0000000000000000 n42
+b00000000 n43
+b0000000000000000 n44
+b0 n45
+b1 n46
+b0 n47
+b0 n48
+b0 n49
+b0 n50
+b0 n51
+b001 n52
+b0 n53
+b0 n54
+b0 n55
+b0 n56
+b00000000000000000000000000000000 n57
+bx n58
+b0 n59
+b0 n60
+b0 n61
+b0 n62
+b0 n63
+b0 n64
+b0 n65
+b00000000 n66
+b00000011 n67
+bx n68
+b0 n69
+b0 n70
+b00000000 n71
+b00000111 n72
+bx n73
+b0 n74
+b0 n75
+b0 n76
+b1 n77
+bx n78
+b0 n79
+b0 n80
+b00 n81
+b10 n82
+bx n83
+b0 n84
+b0 n85
+b0000000000000000 n86
+b0000000000000000 n87
+bx n88
+b0 n89
+b0 n90
+b0000000000000000 n91
+b0000000000000000 n92
+bx n93
+#5
+b0 n3
+b0 n28
+b0 n58
+b0 n68
+b0 n73
+b0 n78
+b0 n83
+b0 n88
+b0 n93
+#10
+b1 n3
+b1 n8
+b1 n11
+b1 n20
+b1 n21
+b1 n28
+b1 n29
+b1 n30
+b1 n33
+b1 n34
+b1 n47
+b010 n52
+b1 n53
+b1 n54
+b00000000000000000000000000000001 n57
+b1 n58
+b1 n59
+b1 n60
+b1 n61
+b1 n62
+b1 n64
+b1 n65
+b1 n68
+b1 n69
+b1 n70
+b1 n73
+b1 n78
+b1 n79
+b1 n80
+b1 n83
+b1 n88
+b1 n93
+#15
+b0 n3
+b0 n28
+b0 n58
+b0 n68
+b0 n73
+b0 n78
+b0 n83
+b0 n88
+b0 n93
+#20
+b1 n3
+b0000000000010101 n13
+b0 n20
+b10 n22
+b1 n28
+b0 n29
+b00000111 n31
+b0 n33
+b00000011 n35
+b0000000000010101 n37
+b10 n39
+b00000111 n41
+b0000000000000111 n42
+b00000011 n43
+b0000000000000011 n44
+b011 n52
+b0 n53
+b00000000000000000000000000000010 n57
+b1 n58
+b0 n59
+b0 n61
+b0 n64
+b00000011 n66
+b1 n68
+b0 n69
+b00000111 n71
+b1 n73
+b1 n78
+b0 n79
+b10 n81
+b1 n83
+b1 n88
+b0000000000010101 n92
+b1 n93
+#25
+b0 n3
+b0 n28
+b0 n58
+b0 n68
+b0 n73
+b0 n78
+b0 n83
+b0 n88
+b0 n93
+#30
+b1 n3
+b1 n12
+b1 n14
+b1 n16
+b1 n18
+b1 n24
+b1 n25
+b1 n28
+b1 n48
+b1 n49
+b1 n50
+b1 n51
+b100 n52
+b1 n55
+b1 n56
+b00000000000000000000000000000011 n57
+b1 n58
+b1 n68
+b1 n73
+b1 n74
+b1 n75
+b1 n78
+b1 n83
+b1 n84
+b1 n85
+b1 n88
+b1 n89
+b1 n90
+b1 n93
+#35
+b0 n3
+b0 n28
+b0 n58
+b0 n68
+b0 n73
+b0 n78
+b0 n83
+b0 n88
+b0 n93
+#40
+b1 n3
+b1 n4
+b0000000000010101 n7
+b0 n12
+b0000000000010101 n15
+b0 n16
+b0 n24
+b1 n27
+b1 n28
+b0 n48
+b0 n50
+b0 n55
+b00000000000000000000000000000100 n57
+b1 n58
+b1 n68
+b1 n73
+b0 n74
+b1 n76
+b1 n78
+b1 n83
+b0 n84
+b1 n88
+b0 n89
+b0000000000010101 n91
+b1 n93
+#45
+b0 n3
+b0 n28
+b0 n58
+b0 n68
+b0 n73
+b0 n78
+b0 n83
+b0 n88
+b0 n93
+#50
+b1 n3
+b1 n28
+b1 n58
+b1 n68
+b1 n73
+b1 n78
+b1 n83
+b1 n88
+b1 n93
+#55
+b0 n3
+b0 n28
+b0 n58
+b0 n68
+b0 n73
+b0 n78
+b0 n83
+b0 n88
+b0 n93
+#60
+b1 n3
+b1 n28
+b1 n58
+b1 n68
+b1 n73
+b1 n78
+b1 n83
+b1 n88
+b1 n93
+#65
+b0 n3
+b0 n28
+b0 n58
+b0 n68
+b0 n73
+b0 n78
+b0 n83
+b0 n88
+b0 n93
+#70
+b1 n3
+b1 n28
+b1 n58
+b1 n68
+b1 n73
+b1 n78
+b1 n83
+b1 n88
+b1 n93
+#75
+b0 n3
+b0 n28
+b0 n58
+b0 n68
+b0 n73
+b0 n78
+b0 n83
+b0 n88
+b0 n93
+#80
+b1 n3
+b1 n28
+b1 n58
+b1 n68
+b1 n73
+b1 n78
+b1 n83
+b1 n88
+b1 n93
+#85
+b0 n3
+b0 n28
+b0 n58
+b0 n68
+b0 n73
+b0 n78
+b0 n83
+b0 n88
+b0 n93
+#90
+b1 n3
+b1 n28
+b1 n58
+b1 n68
+b1 n73
+b1 n78
+b1 n83
+b1 n88
+b1 n93
+#95
+b0 n3
+b0 n28
+b0 n58
+b0 n68
+b0 n73
+b0 n78
+b0 n83
+b0 n88
+b0 n93
+#100
+b1 n3
+b1 n28
+b1 n58
+b1 n68
+b1 n73
+b1 n78
+b1 n83
+b1 n88
+b1 n93
+#102

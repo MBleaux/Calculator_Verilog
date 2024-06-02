@@ -1,0 +1,20 @@
+read_verilog -sv ./src/wrapper_gen.v
+prep -top wrapper
+rename -top wrapper
+uniquify; hierarchy -check
+
+flatten
+
+select t:*ff* %co t:*ff* %d s:2 %i
+fault_rtlil -effect flip -timing 3 -cnt 1
+cd; opt
+
+async2sync
+dffunmap
+
+sim -zinit -clock clock_i -resetn reset_i -n 10 -rstlen 1 -w -vcd ./out/fault.vcd
+
+write_verilog ./out/wrapper_gen_fault.v
+write_rtlil ./out/wrapper_gen_fault.il
+write_btor ./out/wrapper_gen_fault.btor2
+write_smt2 ./out/wrapper_gen_fault.smt2

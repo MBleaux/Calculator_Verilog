@@ -1,74 +1,23 @@
-vsim LIB.dff_nbits_tb
-# vsim LIB.dff_nbits_tb 
-# Start time: 13:27:31 on May 05,2024
+vsim LIB.wrapper_tb
+# vsim LIB.wrapper_tb 
+# Start time: 20:15:45 on May 31,2024
 # Loading sv_std.std
-# Loading LIB.dff_nbits_tb
-# Loading LIB.dff_nbits
-run -all
-# Break key hit
-# Break in Module dff_nbits_tb at ./SRC/BENCH/dff_nbits_tb.v line 19
-vsim LIB.alu_tb
-# End time: 13:27:59 on May 05,2024, Elapsed time: 0:00:28
-# Errors: 0, Warnings: 0
-# vsim LIB.alu_tb 
-# Start time: 13:27:59 on May 05,2024
-# Loading sv_std.std
-# Loading LIB.alu_tb
-# Loading LIB.alu
-run -all
-# Addition Test: a = 00001111, b = 00000101, result = 0000000000010100
-# Subtraction Test: a = 00001111, b = 00000101, result = 0000000000001010
-# Multiplication Test: a = 00000011, b = 00000010, result = 0000000000000110
-# Comparison Test: a = 00001111, b = 00000010, result = 0000000000000111, rem = 0000000000000001
-# ** Note: $finish    : ./SRC/BENCH/alu_tb.v(52)
-#    Time: 40 ns  Iteration: 0  Instance: /alu_tb
-# 1
-# Break in Module alu_tb at ./SRC/BENCH/alu_tb.v line 52
-vsim LIB.fsm_tb
-# End time: 13:29:00 on May 05,2024, Elapsed time: 0:01:01
-# Errors: 0, Warnings: 0
-# vsim LIB.fsm_tb 
-# Start time: 13:29:00 on May 05,2024
-# Loading sv_std.std
-# Loading LIB.fsm_tb
-# Loading LIB.fsm
-run -all
-# Time = 0, State Outputs: a_we_o = 0, a_rst_o = 0, b_we_o = 0, b_rst_o = 0, fct_we_o = 0, fct_rst_o = 0, res_we_o = 0, res_rst_o = 0, done_we_o = 0, done_rst_o = 0
-# Time = 45000, State Outputs: a_we_o = 1, a_rst_o = 1, b_we_o = 1, b_rst_o = 1, fct_we_o = 1, fct_rst_o = 1, res_we_o = 0, res_rst_o = 0, done_we_o = 0, done_rst_o = 0
-# Time = 55000, State Outputs: a_we_o = 0, a_rst_o = 1, b_we_o = 0, b_rst_o = 1, fct_we_o = 0, fct_rst_o = 1, res_we_o = 0, res_rst_o = 0, done_we_o = 0, done_rst_o = 0
-# Time = 65000, State Outputs: a_we_o = 0, a_rst_o = 1, b_we_o = 0, b_rst_o = 1, fct_we_o = 0, fct_rst_o = 1, res_we_o = 1, res_rst_o = 1, done_we_o = 1, done_rst_o = 1
-# Time = 75000, State Outputs: a_we_o = 0, a_rst_o = 1, b_we_o = 0, b_rst_o = 1, fct_we_o = 0, fct_rst_o = 1, res_we_o = 0, res_rst_o = 1, done_we_o = 0, done_rst_o = 1
-# ** Note: $finish    : ./SRC/BENCH/fsm_tb.v(50)
-#    Time: 100 ns  Iteration: 0  Instance: /fsm_tb
-# 1
-# Break in Module fsm_tb at ./SRC/BENCH/fsm_tb.v line 50
-vsim LIB.top_level_tb
-# End time: 13:30:00 on May 05,2024, Elapsed time: 0:01:00
-# Errors: 0, Warnings: 0
-# vsim LIB.top_level_tb 
-# Start time: 13:30:00 on May 05,2024
-# Loading sv_std.std
-# Loading LIB.top_level_tb
+# Loading LIB.wrapper_tb
+# Loading LIB.wrapper
 # Loading LIB.top_level
 # Loading LIB.dff_nbits
 # Loading LIB.fsm
 # Loading LIB.alu
+# ** Warning: (vsim-8311) System Verilog assertions are supported only in Questasim.
+add wave -position insertpoint sim:/wrapper_tb/*
 run -all
-# At                    0, a_i = xx, b_i = xx, fct_i = xx, res_o = 0000, rem_o = 0000, done_o = 0
-# At                10000, a_i = aa, b_i = 55, fct_i = 00, res_o = 0000, rem_o = 0000, done_o = 0
-# At                45000, a_i = aa, b_i = 55, fct_i = 00, res_o = 00ff, rem_o = 0000, done_o = 1
-# At               110000, a_i = aa, b_i = 55, fct_i = 00, res_o = 0000, rem_o = 0000, done_o = 0
-# At               120000, a_i = aa, b_i = 55, fct_i = 01, res_o = 0000, rem_o = 0000, done_o = 0
-# At               155000, a_i = aa, b_i = 55, fct_i = 01, res_o = 0055, rem_o = 0000, done_o = 1
-# At               220000, a_i = aa, b_i = 55, fct_i = 01, res_o = 0000, rem_o = 0000, done_o = 0
-# At               230000, a_i = 05, b_i = c8, fct_i = 10, res_o = 0000, rem_o = 0000, done_o = 0
-# At               265000, a_i = 05, b_i = c8, fct_i = 10, res_o = 03e8, rem_o = 0000, done_o = 1
-# At               330000, a_i = 05, b_i = c8, fct_i = 10, res_o = 0000, rem_o = 0000, done_o = 0
-# At               340000, a_i = 0f, b_i = 02, fct_i = 11, res_o = 0000, rem_o = 0000, done_o = 0
-# At               375000, a_i = 0f, b_i = 02, fct_i = 11, res_o = 0007, rem_o = 0001, done_o = 1
-# ** Note: $finish    : ./SRC/BENCH/top_level_tb.v(79)
-#    Time: 440 ns  Iteration: 0  Instance: /top_level_tb
+# At                    0, res_o = 0000, rem_o = 0000, done_o = 0
+# At                45000, res_o = 000a, rem_o = 0000, done_o = 1
+# At               110000, res_o = 0000, rem_o = 0000, done_o = 0
+# At               175000, res_o = 000a, rem_o = 0000, done_o = 1
+# ** Note: $finish    : ./SRC/BENCH/wrapper_tb.v(45)
+#    Time: 240 ns  Iteration: 0  Instance: /wrapper_tb
 # 1
-# Break in Module top_level_tb at ./SRC/BENCH/top_level_tb.v line 79
-# End time: 13:31:14 on May 05,2024, Elapsed time: 0:01:14
-# Errors: 0, Warnings: 0
+# Break in Module wrapper_tb at ./SRC/BENCH/wrapper_tb.v line 45
+# End time: 20:16:27 on May 31,2024, Elapsed time: 0:00:42
+# Errors: 0, Warnings: 1

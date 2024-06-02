@@ -29,6 +29,10 @@ echo -e "\e[33m---------------------------------------\e[0m"
     echo -e "\e[33m---------------------------------------\e[0m"
     vlog -sv -work LIB $PROJECTNAME/SRC/RTL/top_level.v
     echo -e "\e[33m---------------------------------------\e[0m"
+    vlog -sv -work LIB $PROJECTNAME/SRC/RTL/wrapper.v
+    echo -e "\e[33m---------------------------------------\e[0m"
+    vlog -sv -work LIB $PROJECTNAME/yosys/work_out/wrapper_gen.v
+    echo -e "\e[33m---------------------------------------\e[0m"
 
 echo -e "\e[33mEnd of compilation of the RTL files!\e[0m"
 echo -e "\e[33m---------------------------------------\e[0m"
@@ -45,6 +49,8 @@ echo -e "\e[35m---------------------------------------\e[0m"
     vlog -sv -work LIB $PROJECTNAME/SRC/BENCH/alu_tb.v
     echo -e "\e[35m---------------------------------------\e[0m"
     vlog -sv -work LIB $PROJECTNAME/SRC/BENCH/top_level_tb.v
+    echo -e "\e[35m---------------------------------------\e[0m"
+    vlog -sv -work LIB $PROJECTNAME/SRC/BENCH/wrapper_tb.v
     echo -e "\e[35m---------------------------------------\e[0m"
 
 echo -e "\e[35mEnd of compilation the testbench files!\e[0m"
