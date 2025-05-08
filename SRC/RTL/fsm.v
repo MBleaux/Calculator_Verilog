@@ -5,9 +5,6 @@
   *        IDLE -> READING -> RUNNING -> WRITING -> DONE -> IDLE
  * @version 0.2
  * @date 2024-05-05
- * 
- * @copyright Copyright (c) 2024
- * 
  */
 `timescale 1ns / 1ps
 

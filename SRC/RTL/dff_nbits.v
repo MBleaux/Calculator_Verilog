@@ -4,9 +4,6 @@
  * @brief Register for n bits
  * @version 0.1
  * @date 2024-04-22
- * 
- * @copyright Copyright (c) 2024
- * 
  */
 module dff_nbits #(
     parameter width = 8

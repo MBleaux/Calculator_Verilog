@@ -4,9 +4,6 @@
  * @brief Arithmetic Logic Unit
  * @version 0.3
  * @date 2024-05-05
- * 
- * @copyright Copyright (c) 2024
- * 
  */
 module alu #(
     parameter width = 8

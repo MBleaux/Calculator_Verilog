@@ -1,0 +1,12 @@
+read_verilog -sv ./src/wrapper_gen.v
+prep -top top_level
+rename -top top_level
+uniquify; hierarchy -check
+
+sim -zinit -clock clock_i -resetn reset_i -n 1 -rstlen 1 -w
+
+select -module top_level i:reset_i
+delete -input; setundef -undriven -one
+select -clear;
+
+write_rtlil ./out/fault_gen.il

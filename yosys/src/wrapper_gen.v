@@ -320,12 +320,13 @@ module top_level (
 		.we_i(done_we_s),
 		.q_o(done_o)
 	);
+
 	// assertions
-	// as an error was produced, the compiler generates a .vcd file
-    //assign check_add = fct_i_s == 2'b00;
-    //assert property(check_add);
-	//assign operation = fct_i_s != 2'b10;
-	//assert property(operation);
+	// if an error occurs in the properties, the solver will generate a .vcd file
+
+	assign check_res = ((done_o == 1'b0) && (res_o == 16'h00)) || ((done_o == 1'b1) && (res_o == 16'hFFFC));
+	assert property(check_res);
+
 endmodule
 module wrapper (
 	reset_i,

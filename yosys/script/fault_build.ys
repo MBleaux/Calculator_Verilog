@@ -1,0 +1,12 @@
+read_rtlil ./out/fault_gen.il
+flatten
+
+select w:fct_i_s
+fault_rtlil -effect fixed 2 -timing 2 -cnt 1
+cd; opt
+
+async2sync
+dffunmap
+
+write_btor ./out/fault_gen.btor2
+write_smt2 ./out/fault_gen.smt2

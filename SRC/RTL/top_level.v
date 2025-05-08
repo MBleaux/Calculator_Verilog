@@ -4,9 +4,6 @@
  * @brief Top Level: instantiating the registers, FSM and ALU
  * @version 0.3
  * @date 2024-05-05
- * 
- * @copyright Copyright (c) 2024
- * 
  */
 `timescale 1ns / 1ps
 

@@ -1,0 +1,3 @@
+read_rtlil ./out/nofault_gen.il
+flatten
+sim -zinit -clock clock_i -resetn reset_i -n 10 -rstlen 1 -w -vcd ./out/nofault_sim.vcd

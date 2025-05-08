@@ -8,7 +8,7 @@ module wrapper #(parameter width = 8)(
     // Internal control and status signals
     logic [width-1:0] a_s = 8'h03;
     logic [width-1:0] b_s = 8'h07;
-    logic [1:0] fct_s = 2'b10;
+    logic [1:0] fct_s = 2'b00;
     logic start_s = 1'b1;
 
     // Instance of the top_level module
